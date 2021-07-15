@@ -1,0 +1,17 @@
+
+.lofiChill {
+    display: flex;
+}
+
+.lofiVideoSection {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0.8;
+}
+
+.VideoSectionContainer {
+    background-color: #3FD472;
+    height: 90vh;
+    flex: 0.8;
+}
+

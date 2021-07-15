@@ -1,0 +1,28 @@
+.sidebarRow__genre {
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+
+.sidebarRow__title {
+    padding: 4px 25px;
+    flex: 1;
+    text-decoration: none;
+}
+
+.sidebarRow__title a:active {
+    padding: 4px 25px;
+    flex: 1;
+    text-decoration: none;
+    background-color: #9755D4;
+}
+
+
+.sidebarRow__title:hover {
+    background: #9755D4;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.sidebar-container {
+    flex: 0.2;
+}

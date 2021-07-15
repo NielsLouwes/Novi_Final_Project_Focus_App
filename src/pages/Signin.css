@@ -1,0 +1,31 @@
+.signIn__container {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    /*align-items: center;*/
+    justify-content: center;
+    margin-left: 35%;
+    margin-top: 25%;
+    background: #9755D4;
+    height: 30vh;
+    border-radius: 10%;
+}
+
+.signIn__input {
+    box-sizing: border-box;
+    width: 95%;
+    padding: 10px 15px;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.signIn__label {
+    box-sizing: border-box;
+    width: 95%;
+    padding: 10px 15px;
+    font-size: 20px;
+
+
+}
+
+

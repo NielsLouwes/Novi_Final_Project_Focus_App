@@ -1,0 +1,13 @@
+.sidebar-container {
+    flex: 0.2;
+}
+
+.lofiRelax {
+    display: flex;
+}
+
+.lofiVideoSection {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 0.8;
+}
