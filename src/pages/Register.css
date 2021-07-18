@@ -5,10 +5,10 @@
     /*align-items: center;*/
     justify-content: center;
     margin-left: 35%;
-    margin-top: 25%;
+    margin-top: 15%;
     background: #9755D4;
     height: 40vh;
-    border-radius: 10%;
+    border-radius: 50px;
 }
 
 .register__input {
@@ -38,7 +38,7 @@
     height: 60vh;
 }
 
-.form-title {
+.register-title {
     text-align: center;
     font-size: 2rem;
     margin-bottom: 10px;
@@ -46,7 +46,6 @@
 
 .register__button {
     width: 50%;
-    /*margin: auto;*/
     margin-left: 110px;
     margin-top: 15px;
     margin-bottom: 25px;
@@ -55,4 +54,11 @@
 
 .register__text {
    margin-left: 25px;
+}
+
+.register-background {
+   background: #3FD472;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
 }

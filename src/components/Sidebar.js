@@ -2,16 +2,6 @@ import React from "react";
 import {Link} from "react-router-dom";
 import "./sidebar.css"
 import SidebarRow from "./SidebarRow";
-import LOFIChill from "../pages/LOFIChill";
-
-
-// 1. sidebars takes up 20% of the space.
-
-// <Link to={`/search/${inputSearch}`}>
-//     <button type="submit">Search</button>
-// </Link>
-
-// <button className="landingPage__button"><Link to="/choose-music">Choose Music </Link></button>
 
 export default function Sidebar() {
     return (
@@ -27,7 +17,7 @@ export default function Sidebar() {
             <Link style={{ textDecoration: 'none' }} to="/choose-music/lofi-chill">
             <SidebarRow
                 title="Chill"
-                // onClick = LINK to "/chill"
+
             />
             </Link>
 

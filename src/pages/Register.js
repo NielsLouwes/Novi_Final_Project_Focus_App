@@ -34,10 +34,10 @@ export default function Register() {
 
 
     return (
-        <div>
-            {error && <h2>{error}</h2>}
+        <div className="register-background">
         <form onSubmit={handleSubmit} className="form-main" >
-        <h2 className="form-title">Register </h2>
+        <h2 className="register-title">Register </h2>
+
             <label className="register__label" htmlFor="email">Email</label>
             <input className="register__input"  type="email"ref={emailRef}/>
 
@@ -46,9 +46,10 @@ export default function Register() {
 
             <label className="register__label"     htmlFor="password">Confirm Password</label>
             <input className="register__input"   type="password" ref={passwordConfirmRef}/>
+            {error && <p style={{ color: 'white' , margin: " 0 5px 0 15px" }}>{error}</p>}
 
             <button className="register__button" disabled={loading} type="submit">Create Account</button>
-            <p className="register__text">Already have an account? <Link to="/signin"> Sign In</Link></p>
+            <p className="register__text">Already have an account? <Link style={{ color: 'white' }} to="/signin"> Sign In</Link></p>
         </form>
         </div>
     );

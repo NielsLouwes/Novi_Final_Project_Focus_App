@@ -1,8 +1,6 @@
 import React, {useState} from "react";
 import {Link, useHistory} from "react-router-dom";
 import './Nav.css';
-import logo_one from '../files/—Pngtree—arrow concentration focus head human_4965271.png'
-import logo_two from '../files/—Pngtree—bulb success focus business _4790629.png'
 import logo_three from '../files/—Pngtree—target aim archery focus _3657878.png'
 import {useAuth} from "../contexts/AuthContext";
 
@@ -16,7 +14,7 @@ export default function Nav() {
 
         try {
         await logout()
-            history.push("/signin")
+            history.push("/")
         } catch {
             setError  ("Failed to log out.")
         }
@@ -32,19 +30,20 @@ export default function Nav() {
                 {!currentUser &&
                 <>
                     <li>
-                        <Link className="nav__text" style={{ textDecoration: 'none' }} to="/"> Home</Link>
+                        <Link className="nav__text" style={{ textDecoration: 'none' }} to="/"> HOME</Link>
                     </li>
                     <li>
-                        <Link className="nav__text" style={{ textDecoration: 'none' }} to="/register">Register</Link>
+                        <Link className="nav__text" style={{ textDecoration: 'none' }} to="/register">REGISTER</Link>
                     </li>
 
 
                     <li>
-                    <Link className="nav__text" style={{ textDecoration: 'none' }} to="/signin">Sign In</Link>
+                    <Link className="nav__text" style={{ textDecoration: 'none' }} to="/signin">SIGN IN</Link>
                     </li>
                     </>
 
                 }
+
                 {currentUser &&
                 <>
                     <li>

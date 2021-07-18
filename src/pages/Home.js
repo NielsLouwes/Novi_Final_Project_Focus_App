@@ -19,7 +19,7 @@ export default function Home() {
             <div className="landingPage__buttonContainer">
 
                 <button className="landingPage__button">
-                    <Link style={{ textDecoration: 'none' }} className="landingPage__buttonText" to="/choose-music">Choose Music </Link>
+                    <Link style={{ textDecoration: 'none' }}  className="landingPage__buttonText" to="/choose-music">Choose Music </Link>
                 </button>
 
                 <button className="landingPage__button">

@@ -1,10 +1,11 @@
 .sidebarRow__genre {
     padding: 10px 20px;
-    margin-top: 10px;
+    margin-top: 5px;
+    color: black;
 }
 
 .sidebarRow__title {
-    padding: 4px 25px;
+    padding: 4px 20px;
     flex: 1;
     text-decoration: none;
 }

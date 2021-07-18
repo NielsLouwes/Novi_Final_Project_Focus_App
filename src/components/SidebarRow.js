@@ -1,10 +1,7 @@
 import React from "react";
 import "./SidebarRow.css"
 
-
-
 export default function SidebarRow(props) {
-
 
     return (
         <div className="sidebarRow">

@@ -1,46 +1,46 @@
 import React, {useState, useEffect} from "react";
 import axios from "axios";
 import VideoCard from "../components/Video";
-import {Link} from "react-router-dom";
+import {Link, Redirect} from "react-router-dom";
+import "./StudyLive.css"
+import {useAuth} from "../contexts/AuthContext";
 
-// INSTRUCTIONS
-// 1. Change to API call to include video broadcasting or LIVE now (line 18-19).
-//2. Need to just code it into this page and not use VIDeocard or VIDEO as the inputs might be different.
-
-
-const apiKey = "AIzaSyDZT_Ag1h4M83qwW-WZvyCR_MBrBJzdPvM";
 
 export default function StudyLive() {
 
     const [videos,setVideos] = useState([]);
+    const {currentUser, logout} = useAuth()
 
     useEffect(() => {
         console.log("WHAT IS VIDEOS?", videos);
 
-        async function fetchPopularVideos () {
+        async function fetchStudyLiveVideos () {
             try {
-                const response = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&channelType=video&videoEmbeddable:true&maxResults=2&order=viewCount&q=lofi%20study&key=${apiKey}`)
-                console.log(response.data.items)
+                const response = await axios.get(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&&videoEmbeddable:true&maxResults=9&q=studywithme&key=${process.env.REACT_APP_YT_API_KEY}`)
                 setVideos(response.data.items)
             } catch (e) {
                 console.error(e);
             }
         }
-        fetchPopularVideos();
+        fetchStudyLiveVideos();
     }, []);
 
-
+    if(!currentUser) {
+        return <Redirect to="/signin" />
+    };
 
     return (
-        <div className="VideoSectionContainer" >
-            <h2>See who is studying live now.</h2>
-            {videos ? (
-                    <div>
+        <div className="StudyLive" >
+            <h2 className="StudyLive__Text">Study along with a buddy</h2>
+            <div className="StudyLive__VideosSection">
+                {videos ? (
+                    <div className="VideosSection">
                         {videos.map((video) => {
                             return <VideoCard
                                 id={video.id.videoId}
                                 title={video.snippet.title}
-                                channel={video.channel}
+                                thumbnail={video.snippet.thumbnails.default.url}
+                                channel={video.snippet.channelTitle}
                             />
                         })}
                     </div>
@@ -48,8 +48,10 @@ export default function StudyLive() {
                     <h3>Loading</h3>
                 )}
 
-                <h2>Nobody online?  <Link style={{ textDecoration: 'none' }} to="/choose-music">Check out videos</Link></h2>
-        </div>
+                <h2 className="StudyLive__TextTwo">  Nobody online?  <Link style={{ textDecoration: 'none' }} to="/choose-music">Check out videos</Link></h2>
+            </div>
+            </div>
+
     );
 }
 

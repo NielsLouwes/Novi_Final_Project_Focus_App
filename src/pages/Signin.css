@@ -8,7 +8,7 @@
     margin-top: 25%;
     background: #9755D4;
     height: 30vh;
-    border-radius: 10%;
+    border-radius: 50px;
 }
 
 .signIn__input {
@@ -24,8 +24,18 @@
     width: 95%;
     padding: 10px 15px;
     font-size: 20px;
-
-
 }
+
+.register-background {
+    background: #3FD472;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+
+
 
 

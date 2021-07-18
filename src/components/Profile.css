@@ -2,11 +2,23 @@
     display: flex;
     flex-direction: column;
     width: 450px;
-    /*align-items: center;*/
     justify-content: center;
     margin-left: 35%;
     margin-top: 25%;
     background: #9755D4;
     height: 20vh;
-    border-radius: 10%;
+    border-radius: 50px;
+}
+
+.profile-title {
+    margin-bottom: 35px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.Profile {
+    background: #3FD472;
+    height: 90vh;
+    width: 100%;
+    overflow: hidden;
 }

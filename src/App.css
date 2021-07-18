@@ -13,11 +13,17 @@
 
 .main-music-container {
     display: flex;
+    color: #3FD472;
+    height: 100%;
 }
 
 .sectionTitle {
     text-align: center;
     margin: 10px 0 10px 0;
     font-size: 2rem;
+}
+
+.App {
+    background: #3FD472;
 }
 

@@ -7,12 +7,11 @@ import {Redirect} from "react-router-dom";
 
 
 export default function ChooseMusic() {
+    const {currentUser, logout} = useAuth()
 
-    // const {currentUser, logout} = useAuth()
-    //
-    // if(!currentUser) {
-    //     return <Redirect to="/signin" />
-    // };
+    if(!currentUser) {
+        return <Redirect to="/signin" />
+    };
 
     return (
         <div className="VideoSectionContainer">

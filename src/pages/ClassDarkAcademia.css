@@ -1,24 +1,7 @@
-.recommendedVideos {
-    flex: 1;
-    padding: 40px 20px;
-    background: #3FD472;
-}
-
-.videoSectionContainer {
-    display: flex;
-    flex-wrap: wrap;
-    color: #3FD472;
-}
-
-.lofiVideoSection {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0.8;
-}
 
 .VideoSectionContainer {
     background-color: #3FD472;
-    height: 110vh;
+    height: 90vh;
     flex: 0.8;
 }
 
