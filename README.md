@@ -11,13 +11,6 @@ Screenshots of the application.
 ![image](https://user-images.githubusercontent.com/76694402/125972861-a080044e-f9a0-477f-b83c-8b15b1bb23d2.png)
 
 ![image](https://user-images.githubusercontent.com/76694402/126063121-14d96114-c6cd-4526-945b-b5979ebbea09.png)
-![image](https://user-images.githubusercontent.com/76694402/126067402-e25cdd86-91fa-4edc-9af1-4f368c14e997.png)
-
-![image](https://user-images.githubusercontent.com/76694402/125972609-2c21759d-8c65-46d1-8a27-50e29342d968.png)
-
-![image](https://user-images.githubusercontent.com/76694402/125972688-46774dac-2eda-4682-9a52-d938f25124db.png)
-
-![image](https://user-images.githubusercontent.com/76694402/125972754-5946d765-5575-4017-b182-39292377a2d9.png)
 
 
 
