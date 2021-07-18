@@ -12,6 +12,8 @@ Screenshots of the application.
 
 
 
+
+
 **#Installation Guide**
 
 This app was created using the following packages. Install these after cloning the project.
