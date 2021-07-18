@@ -1,7 +1,5 @@
 # LofiFocus.io
 
-**#READ ME**
-
 **#Introduction**
 This is a Youtube based app that is focused on helping users find music to study or focus to.
 It offers a few different pages to visit based on the selected music genre. Users can navigate between different music genres or choose the "Study Live" section which offers videos of anyone who is currently livestreaming. 
