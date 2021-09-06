@@ -8,7 +8,7 @@ Screenshots of the application.
 
 ![image](https://user-images.githubusercontent.com/76694402/125972861-a080044e-f9a0-477f-b83c-8b15b1bb23d2.png)
 
-![image](https://user-images.githubusercontent.com/76694402/126063121-14d96114-c6cd-4526-945b-b5979ebbea09.png)
+![image](https://user-images.githubusercontent.com/76694402/132182067-5503416a-80b7-467f-bc3c-62cdf701eb56.png)
 
 
 ## Built With
