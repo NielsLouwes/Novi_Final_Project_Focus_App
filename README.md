@@ -11,20 +11,19 @@ Screenshots of the application.
 ![image](https://user-images.githubusercontent.com/76694402/126063121-14d96114-c6cd-4526-945b-b5979ebbea09.png)
 
 
+## Built With
+
+React
+Firebase
+Axios
+
+## Getting Started
+
+Install packages and dependencies.
+npm install
+
+You can create an free API Key with Google Develope OR contact me for the contents of the env. file for the API call that makes the site work.
 
 
 
-**#Installation Guide**
 
-This app was created using the following packages. Install these after cloning the project.
-
-1. React - **npm install React**
-2. Axios - **npm install axios** - for making API calls to the Youtube API.
-3. React-router-dom - **npm install react-router-dom** - used for Links, Redirects, Switch and Routing.
-4. Firebase - for user login and registration and authentication. Use  **npm install --save firebase**.
-To use the app, simply create a new account via Register and then Login.
-
-6. Prop Types - used for creating the Embedded video component for Youtube  -- **npm install --save prop-types**.
-
-This application loads information using the Youtube Data API v3.
-To use it, you need to set up a Youtube Data v3 API key and run the project with npm or yarn.
