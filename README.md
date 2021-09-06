@@ -20,6 +20,7 @@ Axios
 ## Getting Started
 
 Install packages and dependencies.
+
 npm install
 
 You can create an free API Key with Google Develope OR contact me for the contents of the env. file for the API call that makes the site work.
