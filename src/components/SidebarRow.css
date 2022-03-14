@@ -1,11 +1,25 @@
 .sidebarRow__genre {
-  padding: 10px 20px;
-  margin-top: 5px;
+  padding: 4px 20px;
+  margin-top: 15px;
   color: black;
 }
 
 .sidebarRow__title {
   padding: 4px 20px;
+  flex: 1;
+  text-decoration: none;
+}
+
+.sidebarRow__title:first-child {
+  padding: 4px 20px;
+  margin-top: 25px;
+  flex: 1;
+  text-decoration: none;
+}
+
+.sidebarRow__title:last-child {
+  padding: 4px 20px;
+  margin-bottom: 15px;
   flex: 1;
   text-decoration: none;
 }

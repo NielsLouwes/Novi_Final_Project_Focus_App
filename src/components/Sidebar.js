@@ -6,9 +6,8 @@ import SidebarRow from "./SidebarRow";
 export default function Sidebar() {
   return (
     <div className="sidebar-container">
-      <SidebarRow genre="LOFI" />
       <Link style={{ textDecoration: "none" }} to="/choose-music/lofi-hiphop">
-        <SidebarRow title="Hip Hop" />
+         <SidebarRow genre="LOFI" title="Hip Hop" />
       </Link>
       <Link style={{ textDecoration: "none" }} to="/choose-music/lofi-chill">
         <SidebarRow title="Chill" />
@@ -18,13 +17,11 @@ export default function Sidebar() {
         <SidebarRow title="Piano" />
       </Link>
 
-      <SidebarRow genre="Classical Music" />
-
       <Link
         style={{ textDecoration: "none" }}
         to="/choose-music-classical-music-classical"
       >
-        <SidebarRow title="Classical" />
+        <SidebarRow genre="Classical Music" title="Classical" />
       </Link>
 
       <Link
@@ -39,13 +36,12 @@ export default function Sidebar() {
       >
         <SidebarRow title="Dark Academia" />
       </Link>
-      <SidebarRow genre="Binaural Beats" />
 
       <Link
         style={{ textDecoration: "none" }}
         to="/choose-music-binaural-beats-relax"
       >
-        <SidebarRow title="Relax" />
+        <SidebarRow genre="Binaural Beats" title="Relax" />
       </Link>
 
       <Link
@@ -62,12 +58,11 @@ export default function Sidebar() {
         <SidebarRow title="Motivation" />
       </Link>
 
-      <SidebarRow genre="Nature Sounds" />
       <Link
         style={{ textDecoration: "none" }}
         to="/choose-music-nature-sounds-rain"
       >
-        <SidebarRow title="Rain" />
+        <SidebarRow title="Rain" genre="Nature Sounds" />
       </Link>
 
       <Link
