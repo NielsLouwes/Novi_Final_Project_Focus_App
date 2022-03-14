@@ -1,29 +1,29 @@
 .sidebarRow__genre {
-    padding: 10px 20px;
-    margin-top: 5px;
-    color: black;
+  padding: 10px 20px;
+  margin-top: 5px;
+  color: black;
 }
 
 .sidebarRow__title {
-    padding: 4px 20px;
-    flex: 1;
-    text-decoration: none;
+  padding: 4px 20px;
+  flex: 1;
+  text-decoration: none;
 }
 
 .sidebarRow__title a:active {
-    padding: 4px 25px;
-    flex: 1;
-    text-decoration: none;
-    background-color: #9755D4;
+  padding: 4px 25px;
+  flex: 1;
+  text-decoration: none;
+  background-color: #9755d4;
 }
 
-
 .sidebarRow__title:hover {
-    background: #9755D4;
-    cursor: pointer;
-    font-weight: bold;
+  background: #9755d4;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
 }
 
 .sidebar-container {
-    flex: 0.2;
+  flex: 0.2;
 }
