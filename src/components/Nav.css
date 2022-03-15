@@ -1,42 +1,57 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height: 10vh;
-    padding: 20px;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: #3FD472;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 10vh;
+  padding: 20px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #3fd472;
 }
 
 .nav-links {
-    width: 30%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
 }
 
 .nav-links {
-    color: #9755D4;
+  color: #9755d4;
 }
-
 
 .header__logo {
-    height: 10vh;
-    object-fit: contain;
+  height: 10vh;
+  object-fit: contain;
 }
 
 .nav__text {
-    color: #9755D4;
-    font-size: 1.2rem;
-    font-weight: bolder;
+  color: #9755d4;
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
 
 .nav__text:hover {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bolder;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bolder;
 }
 
+.logOutButton {
+  padding: 4px 20px;
+  border-radius: 15px;
+  border: none;
+  background-color: #3fd472;
+  color: #9755d4;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}
+
+.logOutButton:hover {
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bolder;
+}

@@ -77,9 +77,6 @@ export default function Nav() {
                 Home
               </Link>
             </li>
-            <button className="logOutButton" onClick={handleLogout}>
-              Sign Out
-            </button>
             <li>
               <Link
                 className="nav__text"
@@ -89,6 +86,9 @@ export default function Nav() {
                 Profile
               </Link>
             </li>
+             <button className="logOutButton" onClick={handleLogout}>
+              Sign Out
+            </button>
           </>
         )} 
       </ul>

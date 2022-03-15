@@ -3,6 +3,20 @@ import { Link } from "react-router-dom";
 import "./sidebar.css";
 import SidebarRow from "./SidebarRow";
 
+const sidebarItems = [
+  {
+    genre: 'LOFI',
+    title: "Hip Hop"
+  }, 
+  {
+    title: "Chill"
+  }
+]
+
+// const sideBarMapping = sidebarItems.map((item) => {
+//   return item.genre && item.title;
+// }))
+
 export default function Sidebar() {
   return (
     <div className="sidebar-container">
@@ -10,7 +24,7 @@ export default function Sidebar() {
          <SidebarRow genre="LOFI" title="Hip Hop" />
       </Link>
       <Link style={{ textDecoration: "none" }} to="/choose-music/lofi-chill">
-        <SidebarRow title="Chill" />
+        <SidebarRow title="Chill"/>
       </Link>
 
       <Link style={{ textDecoration: "none" }} to="/choose-music/lofi-piano">
