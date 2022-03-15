@@ -29,11 +29,12 @@ function App() {
   return (
     <div className="App">
       <Nav />
+       
       <Switch>
         <Route exact path="/choose-music/lofi-chill">
           <div className="main-music-container">
-            <Sidebar />
             <LOFIChill />
+            <Sidebar />
           </div>
         </Route>
 

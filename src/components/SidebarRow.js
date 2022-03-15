@@ -3,10 +3,14 @@ import "./SidebarRow.css"
 
 export default function SidebarRow(props) {
 
+  if (props.title === true){
+    return 
+  }
+
     return (
         <div className="sidebarRow">
             <h2 className="sidebarRow__genre">{props.genre}</h2>
-            <p className="sidebarRow__title">{props.title}</p>
+           {props.title ? (<p className="sidebarRow__title">{props.title}</p>) : null} 
         </div>
     );
 }
