@@ -33,8 +33,8 @@ function App() {
       <Switch>
         <Route exact path="/choose-music/lofi-chill">
           <div className="main-music-container">
-            <LOFIChill />
             <Sidebar />
+            <LOFIChill />
           </div>
         </Route>
 

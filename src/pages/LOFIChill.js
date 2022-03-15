@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./LOFIChill.css";
 import VideoCard from "../components/Video";
 import axios from "axios";
+import Sidebar from "../components/Sidebar";
 
 export default function LOFIChill() {
   const [videos, setVideos] = useState([]);

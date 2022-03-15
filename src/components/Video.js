@@ -12,7 +12,7 @@ export default function VideoCard(props) {
             <div className="videoCard__info">
                 <YoutubeEmbed  className="video-player" src={embedURL}  embedId={props.id} />
                 <div className="videoCard__description">
-                    <h4>{props.title}</h4>
+                    <h4 >{props.title}</h4>
                     <p>{props.channel}</p>
                     <p>{props.views}</p>
                 </div>
