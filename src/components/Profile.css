@@ -14,6 +14,11 @@
     margin-bottom: 35px;
     text-align: center;
     font-size: 2rem;
+    background: #9755D4;
+}
+
+.register__label {
+  background: #9755D4;
 }
 
 .Profile {
