@@ -5,92 +5,61 @@ import SidebarRow from "./SidebarRow";
 
 const sidebarItems = [
   {
-    genre: 'LOFI',
-    title: "Hip Hop"
-  }, 
+    to: "LOFI",
+    title: "Hip Hop",
+  },
   {
-    title: "Chill"
-  }
-]
+    title: "Chill",
+  },
+];
 
-// const sideBarMapping = sidebarItems.map((item) => {
-//   return item.genre && item.title;
-// }))
+//WORKING ON PUTTING SIDEBAR IN OBJECTS TO EASILY MAP THROUGH TO REDUCE CODE
+const lofiGenres = ["Hip Hop", "Chill", "Piano"];
+
+const titleAndGenres = {
+  title: {
+    one: "LOFI",
+    two: "Classical Music",
+    three: "Binaural Beats",
+    four: "Nature Sounds",
+  },
+  genres: {},
+};
 
 export default function Sidebar() {
   return (
     <div className="sidebar-container">
-      <Link style={{ textDecoration: "none" }} to="/choose-music/lofi-hiphop">
-         <SidebarRow genre="LOFI" title="Hip Hop" />
-      </Link>
-      <Link style={{ textDecoration: "none" }} to="/choose-music/lofi-chill">
-        <SidebarRow title="Chill"/>
-      </Link>
+      <div className="sidebarRow">
+        <h2 className="sidebarRow__genre">{titleAndGenres.title.one}</h2>
+        <Link className="sidebarRow__genre" to="/choose-music/lofi-hiphop">{lofiGenres[0]}</Link>
+        <Link className="sidebarRow__genre" to="/choose-music/lofi-chill">Chill</Link>
+        <Link className="sidebarRow__genre" to="/choose-music/lofi-piano">Piano</Link>
+      </div>
 
-      <Link style={{ textDecoration: "none" }} to="/choose-music/lofi-piano">
-        <SidebarRow title="Piano" />
-      </Link>
+      <div className="sidebarRow">
+        <h2 className="sidebarRow__genre">Classical Music</h2>
+        <Link className="sidebarRow__genre" to="/choose-music-classical-music-classical">Classical</Link>
+        <Link className="sidebarRow__genre" to="/choose-music-classical-music-neo-classical">
+          Neo Classical
+        </Link>
+        <Link className="sidebarRow__genre" to="/choose-music-classical-music-dark-academia">
+          Dark Academia
+        </Link>
+      </div>
 
-      <Link
-        style={{ textDecoration: "none" }}
-        to="/choose-music-classical-music-classical"
-      >
-        <SidebarRow genre="Classical Music" title="Classical" />
-      </Link>
+      <div className="sidebarRow">
+        <h2 className="sidebarRow__genre">Binaural Beats</h2>
+        <Link className="sidebarRow__genre" to="/choose-music-binaural-beats-relax">Relax</Link>
+        <Link className="sidebarRow__genre" to="/choose-music-binaural-beats-focus">Focus</Link>
+        <Link className="sidebarRow__genre" to="/choose-music-binaural-beats-motivation">Motivation</Link>
+      </div>
 
-      <Link
-        style={{ textDecoration: "none" }}
-        to="/choose-music-classical-music-neo-classical"
-      >
-        <SidebarRow title="Neo Classical" />
-      </Link>
-      <Link
-        style={{ textDecoration: "none" }}
-        to="/choose-music-classical-music-dark-academia"
-      >
-        <SidebarRow title="Dark Academia" />
-      </Link>
-
-      <Link
-        style={{ textDecoration: "none" }}
-        to="/choose-music-binaural-beats-relax"
-      >
-        <SidebarRow genre="Binaural Beats" title="Relax" />
-      </Link>
-
-      <Link
-        style={{ textDecoration: "none" }}
-        to="/choose-music-binaural-beats-focus"
-      >
-        <SidebarRow title="Focus" />
-      </Link>
-
-      <Link
-        style={{ textDecoration: "none" }}
-        to="/choose-music-binaural-beats-motivation"
-      >
-        <SidebarRow title="Motivation" />
-      </Link>
-
-      <Link
-        style={{ textDecoration: "none" }}
-        to="/choose-music-nature-sounds-rain"
-      >
-        <SidebarRow title="Rain" genre="Nature Sounds" />
-      </Link>
-
-      <Link
-        style={{ textDecoration: "none" }}
-        to="/choose-music-nature-sounds-nature"
-      >
-        <SidebarRow title="Nature" />
-      </Link>
-      <Link
-        style={{ textDecoration: "none" }}
-        to="/choose-music-nature-sounds-fireplace"
-      >
-        <SidebarRow title="Fireplace" />
-      </Link>
+      <div className="sidebarRow">
+        <h2 className="sidebarRow__genre">Nature Sounds</h2>
+        <Link className="sidebarRow__genre" to="/choose-music-nature-sounds-rain">Rain</Link>
+        <Link className="sidebarRow__genre" to="/choose-music-nature-sounds-nature">Nature</Link>
+        <Link className="sidebarRow__genre" to="/choose-music-nature-sounds-fireplace">Fireplace</Link>
+      </div>
     </div>
   );
 }

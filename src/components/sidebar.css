@@ -1,10 +1,15 @@
 .sidebar-container {
-    flex: 0.2;
-    min-width: 15%;
-    background: #3FD472;
-    height: 110vh;
-    position: sticky;
+  flex: 0.2;
+  min-width: 15%;
+  background: #3fd472;
+  min-height: 100%;
+  position: sticky;
 }
 
-
-
+.sidebarRow__genre {
+  padding: 4px 20px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  color: #9755d4;
+  text-decoration: none;
+}

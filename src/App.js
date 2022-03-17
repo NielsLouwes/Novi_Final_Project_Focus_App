@@ -28,8 +28,7 @@ import NatureSoundsRain from "./pages/NatureRain";
 function App() {
   return (
     <div className="App">
-      <Nav />
-       
+      <Nav />     
       <Switch>
         <Route exact path="/choose-music/lofi-chill">
           <div className="main-music-container">
