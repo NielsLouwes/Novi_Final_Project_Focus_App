@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 
 //Need three states for data, loading and errors
-function useFetch() {
+function useFetch(url) {
   const [data, setData] = useState(null);
   const [loading, setLoading] = useState(null);
   const [error, setError] = useState(null);
@@ -12,7 +12,7 @@ function useFetch() {
     axios
       .get(url)
       .then((response) => {
-        setData(response.data);
+        setData(response.data.items);
       })
       .catch((err) => {
         setError(err);
