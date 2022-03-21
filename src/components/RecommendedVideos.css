@@ -8,6 +8,7 @@
     display: flex;
     flex-wrap: wrap;
     color: #3FD472;
+    gap: 25px;
 }
 
 .lofiVideoSection {

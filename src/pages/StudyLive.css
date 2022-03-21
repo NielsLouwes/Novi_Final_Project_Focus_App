@@ -29,3 +29,12 @@
     margin-left: 35%;
     font-size: 2rem;
 }
+
+.link-style:hover {
+  color: white;
+  font-weight: bolder;
+}
+
+.link-style {
+   color: #9755d4;
+}

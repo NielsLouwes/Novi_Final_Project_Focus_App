@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./LOFIChill.css";
 import VideoCard from "../components/Video";
-import axios from "axios";
 import useFetch from "../components/useFetch";
 
 export default function NeoClassical() {

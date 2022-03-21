@@ -24,9 +24,9 @@ export default function StudyLive() {
     <div className="StudyLive">
       <h2 className="StudyLive__Text">Study along with a buddy</h2>
       <div className="StudyLive__VideosSection">
-        {videos ? (
+        {data ? (
           <div className="VideosSection">
-            {videos.map((video) => {
+            {data.map((video) => {
               return (
                 <VideoCard
                   id={video.id.videoId}
@@ -44,7 +44,7 @@ export default function StudyLive() {
         <h2 className="StudyLive__TextTwo">
           {" "}
           Nobody online?{" "}
-          <Link style={{ textDecoration: "none" }} to="/choose-music">
+          <Link className="link-style" style={{ textDecoration: "none" }} to="/choose-music">
             Check out videos
           </Link>
         </h2>
