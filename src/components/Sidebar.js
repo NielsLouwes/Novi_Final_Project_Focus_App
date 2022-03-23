@@ -3,16 +3,6 @@ import { Link } from "react-router-dom";
 import "./sidebar.css";
 import SidebarRow from "./SidebarRow";
 
-const sidebarItems = [
-  {
-    to: "LOFI",
-    title: "Hip Hop",
-  },
-  {
-    title: "Chill",
-  },
-];
-
 //WORKING ON PUTTING SIDEBAR IN OBJECTS TO EASILY MAP THROUGH TO REDUCE CODE
 const lofiGenres = ["Hip Hop", "Chill", "Piano"];
 
@@ -37,7 +27,7 @@ export default function Sidebar() {
       </div>
 
       <div className="sidebarRow">
-        <h2 className="sidebarRow__genre">Classical Music</h2>
+        <h2 className="sidebarRow__genre">{titleAndGenres.title.two}</h2>
         <Link className="sidebarRow__genre" to="/choose-music-classical-music-classical">Classical</Link>
         <Link className="sidebarRow__genre" to="/choose-music-classical-music-neo-classical">
           Neo Classical
@@ -48,14 +38,14 @@ export default function Sidebar() {
       </div>
 
       <div className="sidebarRow">
-        <h2 className="sidebarRow__genre">Binaural Beats</h2>
+        <h2 className="sidebarRow__genre">{titleAndGenres.title.three}</h2>
         <Link className="sidebarRow__genre" to="/choose-music-binaural-beats-relax">Relax</Link>
         <Link className="sidebarRow__genre" to="/choose-music-binaural-beats-focus">Focus</Link>
         <Link className="sidebarRow__genre" to="/choose-music-binaural-beats-motivation">Motivation</Link>
       </div>
 
       <div className="sidebarRow">
-        <h2 className="sidebarRow__genre">Nature Sounds</h2>
+        <h2 className="sidebarRow__genre">{titleAndGenres.title.four}</h2>
         <Link className="sidebarRow__genre" to="/choose-music-nature-sounds-rain">Rain</Link>
         <Link className="sidebarRow__genre" to="/choose-music-nature-sounds-nature">Nature</Link>
         <Link className="sidebarRow__genre" to="/choose-music-nature-sounds-fireplace">Fireplace</Link>

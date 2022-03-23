@@ -10,7 +10,7 @@ export default function Profile() {
   // const [loading, setLoading] = useState(false);
   // const history = useHistory();
   const [user, setUser] = useState([
-    
+    "Niels", "Louwes"
   ])
   // setUser("Bob", "Hope");
 
@@ -36,8 +36,8 @@ export default function Profile() {
       {error && <h2>{error}</h2>}
       <form className="ProfileMain">
         <h2 className="profile-title">My profile  </h2>
-        <p className="profile-text">First Name: {user2[0]}</p>
-        <p className="profile-text">Last Name: {user2[1]} </p>
+        <p className="profile-text">First Name: {user[0]}</p>
+        <p className="profile-text">Last Name: {user[1]} </p>
         {currentUser ? (
           <label className="register__label" htmlFor="email">
             <strong className="register__label">Email:</strong>{" "}

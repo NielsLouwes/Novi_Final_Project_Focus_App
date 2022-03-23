@@ -21,7 +21,6 @@ export default function Home() {
             Choose Music{" "}
           </Link>
         </button>
-
         <button className="landingPage__button">
           <Link
             style={{ textDecoration: "none" }}
