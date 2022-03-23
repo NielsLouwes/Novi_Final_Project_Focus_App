@@ -12,10 +12,14 @@ export default function Profile() {
   const [isEditing, setIsEditing] = useState(false);
 
   let user2 = ["Niels", "Louwes"];
-  const editUser2 = () => {
-    let userInput = prompt("Enter your first name");
-    setUser({ ...user, firstname: userInput });
-  };
+  // const editUser2 = () => {
+  //   let userInput = prompt("Enter your first name");
+  //   setUser({ ...user, firstname: userInput });
+  // };
+
+  const editUser = () => {
+    setIsEditing(true)
+  }
 
   // if isEditing, show edit form , edit form updates the state
 
@@ -36,7 +40,7 @@ export default function Profile() {
           ) : (
             <Redirect to="/signin"> </Redirect>
           )}
-          <button onClick={editUser2} className="profile-button">
+          <button onClick={editUser} className="profile-button">
             Edit
           </button>
         </form>

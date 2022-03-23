@@ -11,6 +11,10 @@ const StyledWrapper = styled.div`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
+  background-color: purple;
+  height: 25vh;
+  width: 20%;
+  border-radius: 15px;
 `;
 
 const Button = styled.button`
