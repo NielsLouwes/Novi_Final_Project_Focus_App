@@ -22,7 +22,7 @@ const Button = styled.button`
 `;
 function EditForm({ isEditing, setIsEditing }) {
   const history = useHistory();
-  // const [isEditing, setIsEditing] = useState(true)
+ 
 
   const handleClick = () => {
     setIsEditing(false);
