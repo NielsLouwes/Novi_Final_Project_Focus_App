@@ -1,7 +1,12 @@
 import React, { useState, useEffect } from "react";
 import "./NatureFireplace.css";
 import VideoCard from "../components/Video";
-import axios from "axios";
+import {
+  StyledContainer,
+  VideoSectionContainer,
+  VideoSection,
+  Title,
+} from "../components/Styling/videoSectionGlobalStyle";
 import useFetch from "../components/useFetch";
 
 export default function NatureSoundsFireplace() {

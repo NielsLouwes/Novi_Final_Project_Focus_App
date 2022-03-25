@@ -2,6 +2,12 @@ import React, { useState, useEffect } from "react";
 import "./LOFIChill.css";
 import VideoCard from "../components/Video";
 import useFetch from "../components/useFetch";
+import {
+  StyledContainer,
+  VideoSectionContainer,
+  VideoSection,
+  Title,
+} from "../components/Styling/videoSectionGlobalStyle";
 
 export default function NeoClassical() {
   const { data, loading, error } = useFetch(

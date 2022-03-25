@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from "react";
 import "./BinauralBeatsMotivation.css";
 import VideoCard from "../components/Video";
-import axios from "axios";
 import useFetch from "../components/useFetch";
+import {
+  StyledContainer,
+  VideoSectionContainer,
+  VideoSection,
+  Title,
+} from "../components/Styling/videoSectionGlobalStyle";
 
 export default function BinauralBeatsMotivation() {
   const { data, loading, error } = useFetch(
@@ -13,11 +18,11 @@ export default function BinauralBeatsMotivation() {
   if (error) console.log(error);
 
   return (
-    <div className="VideoSectionContainer">
-      <h2 className="VideoSection__Title">Binaural Beats Motivation</h2>
-      <div className="lofiVideoSection">
+    <StyledContainer className="VideoSectionContainer">
+      <Title className="VideoSection__Title">Binaural Beats Motivation</Title>
+      <VideoSectionContainer className="lofiVideoSection">
         {data ? (
-          <div className="VideosSection">
+          <VideoSection className="VideosSection">
             {data.map((video) => {
               return (
                 <VideoCard
@@ -28,11 +33,11 @@ export default function BinauralBeatsMotivation() {
                 />
               );
             })}
-          </div>
+          </VideoSection>
         ) : (
           <h3>Loading</h3>
         )}
-      </div>
-    </div>
+      </VideoSectionContainer>
+    </StyledContainer>
   );
 }

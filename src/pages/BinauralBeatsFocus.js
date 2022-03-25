@@ -1,21 +1,27 @@
 import React, { useState, useEffect } from "react";
 import VideoCard from "../components/Video";
-import axios from "axios";
 import useFetch from "../components/useFetch";
-import {StyledContainer, VideoSectionContainer, VideoSection, Title} from '../components/Styling/videoSectionGlobalStyle'
+import {
+  StyledContainer,
+  VideoSectionContainer,
+  VideoSection,
+  Title,
+} from "../components/Styling/videoSectionGlobalStyle";
 
 export default function BinauralBeatsFocus() {
-  const {data, loading, error} = useFetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=binauralbeats%20focus&key=${process.env.REACT_APP_YT_API_KEY}`)
+  const { data, loading, error } = useFetch(
+    `https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=binauralbeats%20focus&key=${process.env.REACT_APP_YT_API_KEY}`
+  );
 
   if (loading) return <h1>LOADING...</h1>;
-  if(error) console.log(error);
+  if (error) console.log(error);
 
   return (
-    <StyledContainer >
+    <StyledContainer>
       <Title className="VideoSection__Title">Binaural Beats Focus</Title>
-      <VideoSectionContainer >
+      <VideoSectionContainer>
         {data ? (
-          <VideoSection >
+          <VideoSection>
             {data.map((video) => {
               return (
                 <VideoCard
