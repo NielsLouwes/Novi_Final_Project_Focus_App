@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./LOFIHiphop.css";
 import VideoCard from "../components/Video";
 import {
   StyledContainer,
