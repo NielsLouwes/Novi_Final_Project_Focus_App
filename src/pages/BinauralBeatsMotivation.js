@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./BinauralBeatsMotivation.css";
 import VideoCard from "../components/Video";
 import useFetch from "../components/useFetch";
 import {

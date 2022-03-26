@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./LOFIChill.css";
 import VideoCard from "../components/Video";
 import {
   StyledContainer,
@@ -19,11 +18,11 @@ export default function LOFIChill() {
   if (error) console.log(error);
 
   return (
-    <div className="VideoSectionContainer">
-      <h2 className="VideoSection__Title">LOFI Chill</h2>
-      <div className="lofiChillVideoSection">
+    <StyledContainer className="VideoSectionContainer">
+      <Title className="VideoSection__Title">Lofi Chill</Title>
+      <VideoSectionContainer className="lofiVideoSection">
         {data ? (
-          <div className="VideosSection">
+          <VideoSection className="VideosSection">
             {data.map((video) => {
               return (
                 <VideoCard
@@ -34,11 +33,11 @@ export default function LOFIChill() {
                 />
               );
             })}
-          </div>
+          </VideoSection>
         ) : (
           <h3>Loading</h3>
         )}
-      </div>
-    </div>
+      </VideoSectionContainer>
+    </StyledContainer>
   );
 }

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import "./ClassClassical.css";
 import VideoCard from "../components/Video";
 import {
   StyledContainer,

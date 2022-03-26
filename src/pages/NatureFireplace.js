@@ -18,11 +18,11 @@ export default function NatureSoundsFireplace() {
   if (error) console.log(error);
 
   return (
-    <div className="VideoSectionContainer">
-      <h2 className="VideoSection__Title">Fireplace sounds</h2>
-      <div className="lofiVideoSection">
+    <StyledContainer className="VideoSectionContainer">
+      <Title className="VideoSection__Title">Fireplace Sounds</Title>
+      <VideoSectionContainer className="lofiVideoSection">
         {data ? (
-          <div className="VideosSection">
+          <VideoSection className="VideosSection">
             {data.map((video) => {
               return (
                 <VideoCard
@@ -33,11 +33,11 @@ export default function NatureSoundsFireplace() {
                 />
               );
             })}
-          </div>
+          </VideoSection>
         ) : (
           <h3>Loading</h3>
         )}
-      </div>
-    </div>
+      </VideoSectionContainer>
+    </StyledContainer>
   );
 }

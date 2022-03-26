@@ -18,15 +18,14 @@ export default function NatureSoundsNature() {
   if (error) console.log(error);
 
   return (
-    <div className="VideoSectionContainer">
-      <h2 className="VideoSection__Title">Nature Sounds</h2>
-      <div className="lofiVideoSection">
+    <StyledContainer className="VideoSectionContainer">
+      <Title className="VideoSection__Title">Nature Sounds</Title>
+      <VideoSectionContainer className="lofiVideoSection">
         {data ? (
-          <div className="VideosSection">
+          <VideoSection className="VideosSection">
             {data.map((video) => {
               return (
                 <VideoCard
-                  //insert ID props with correct location in JSON file
                   id={video.id.videoId}
                   title={video.snippet.title}
                   thumbnail={video.snippet.thumbnails.default.url}
@@ -34,11 +33,11 @@ export default function NatureSoundsNature() {
                 />
               );
             })}
-          </div>
+          </VideoSection>
         ) : (
           <h3>Loading</h3>
         )}
-      </div>
-    </div>
+      </VideoSectionContainer>
+    </StyledContainer>
   );
 }

@@ -4,12 +4,6 @@ import RecommendedVideos from "../components/RecommendedVideos";
 import "./ChooseMusic.css";
 import { useAuth } from "../contexts/AuthContext";
 import { Redirect } from "react-router-dom";
-import {
-  StyledContainer,
-  VideoSectionContainer,
-  VideoSection,
-  Title,
-} from "../components/Styling/videoSectionGlobalStyle";
 
 export default function ChooseMusic() {
   const { currentUser, logout } = useAuth();
