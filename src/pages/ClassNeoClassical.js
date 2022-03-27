@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import VideoCard from "../components/Video";
 import useFetch from "../components/useFetch";
 import {

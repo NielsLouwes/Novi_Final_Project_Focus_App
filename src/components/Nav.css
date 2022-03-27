@@ -33,6 +33,10 @@
   font-weight: bolder;
 }
 
+.nav__text:focus {
+  color: white;
+}
+
 .nav__text:hover {
   color: white;
   font-size: 1.2rem;

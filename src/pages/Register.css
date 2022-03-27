@@ -42,6 +42,8 @@
     text-align: center;
     font-size: 2rem;
     margin-bottom: 10px;
+    background: #9755D4;
+     border-radius: 50px;
 }
 
 .register__button {
@@ -54,6 +56,8 @@
 
 .register__text {
    margin-left: 25px;
+   background: #9755D4;
+   width: 90%;
 }
 
 .register-background {
@@ -61,4 +65,8 @@
     height: 90vh;
     width: 100%;
     overflow: hidden;
+}
+
+.register__link {
+ background: #9755D4;
 }

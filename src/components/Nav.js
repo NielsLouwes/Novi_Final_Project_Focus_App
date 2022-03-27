@@ -20,6 +20,8 @@ export default function Nav() {
     }
   }
 
+  console.log(currentUser)
+
   return (
     <nav className="header">
       <Link className="nav__text" to="/">
@@ -65,7 +67,7 @@ export default function Nav() {
               </Link>
             </li>
           </>
-        ):(
+        ) : (
           <>
             <li>
               <Link
@@ -74,7 +76,7 @@ export default function Nav() {
                 to="/"
               >
                 {" "}
-                Home
+                HOME
               </Link>
             </li>
             <li>
@@ -83,14 +85,14 @@ export default function Nav() {
                 style={{ textDecoration: "none" }}
                 to="/profile"
               >
-                Profile
+                PROFILE
               </Link>
             </li>
-             <button className="logOutButton" onClick={handleLogout}>
-              Sign Out
+            <button className="logOutButton" onClick={handleLogout}>
+              SIGN OUT
             </button>
           </>
-        )} 
+        )}
       </ul>
     </nav>
   );

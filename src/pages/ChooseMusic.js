@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Sidebar from "../components/Sidebar";
 import RecommendedVideos from "../components/RecommendedVideos";
 import "./ChooseMusic.css";
@@ -11,6 +11,7 @@ export default function ChooseMusic() {
   if (!currentUser) {
     return <Redirect to="/signin" />;
   }
+  console.log(currentUser);
 
   return (
     <div className="VideoSectionContainer">

@@ -52,7 +52,11 @@ export default function Login() {
         </button>
         <p className="register__text">
           Don't have an account?{" "}
-          <Link style={{ color: "white" }} to="/register">
+          <Link
+            className="register__link"
+            style={{ color: "white" }}
+            to="/register"
+          >
             Register
           </Link>
         </p>

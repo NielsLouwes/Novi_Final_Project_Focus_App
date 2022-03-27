@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import VideoCard from "../components/Video";
 import {
   StyledContainer,
@@ -6,7 +6,6 @@ import {
   VideoSection,
   Title,
 } from "../components/Styling/videoSectionGlobalStyle";
-import Sidebar from "../components/Sidebar";
 import useFetch from "../components/useFetch";
 
 export default function LOFIChill() {

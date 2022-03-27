@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
-import SidebarRow from "./SidebarRow";
 
 //WORKING ON PUTTING SIDEBAR IN OBJECTS TO EASILY MAP THROUGH TO REDUCE CODE
 const lofiGenres = ["Hip Hop", "Chill", "Piano"];

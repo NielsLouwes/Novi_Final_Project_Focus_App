@@ -13,7 +13,9 @@ export default function RecommendedVideos() {
     `https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=lofi%20study&key=${process.env.REACT_APP_YT_API_KEY}`
   );
 
-  if (loading) return <h1>LOADING...</h1>;
+  if (loading) return <div class="spinner-border" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>;
   if (error) console.log(error);
 
   return (

@@ -62,7 +62,7 @@ export default function Register() {
         </button>
         <p className="register__text">
           Already have an account?{" "}
-          <Link style={{ color: "white" }} to="/signin">
+          <Link  className="register__link" style={{ color: "white" }} to="/signin">
             {" "}
             Sign In
           </Link>
