@@ -1,36 +1,42 @@
 import React, { useState, useEffect } from "react";
-import "./RecommendedVideos.css";
-import axios from "axios";
 import VideoCard from "./Video";
-import useFetch from "./useFetch"
+import useFetch from "./useFetch";
+import {
+  StyledContainer,
+  VideoSectionContainer,
+  VideoSection,
+  Title,
+} from "../components/Styling/videoSectionGlobalStyle";
 
 export default function RecommendedVideos() {
-  const {data, loading, error} = useFetch(`https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=lofi%20study&key=${process.env.REACT_APP_YT_API_KEY}`)
+  const { data, loading, error } = useFetch(
+    `https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=lofi%20study&key=${process.env.REACT_APP_YT_API_KEY}`
+  );
 
   if (loading) return <h1>LOADING...</h1>;
-  if(error) console.log(error);
+  if (error) console.log(error);
 
   return (
-    <div className="recommendedVideos">
-      <h2 className="VideoSection__Title">Most Popular</h2>
-      <div className="videoSectionContainer">
+    <StyledContainer className="VideoSectionContainer">
+      <Title className="VideoSection__Title">Most Popular</Title>
+      <VideoSectionContainer className="lofiVideoSection">
         {data ? (
-          <div className="VideosSection">
-            {data.map((data) => {
+          <VideoSection className="VideosSection">
+            {data.map((video) => {
               return (
                 <VideoCard
-                  id={data.id.videoId}
-                  title={data.snippet.title}
-                  channel={data.snippet.channelTitle}
-                  key={data.id.videoId}
+                  id={video.id.videoId}
+                  title={video.snippet.title}
+                  thumbnail={video.snippet.thumbnails.default.url}
+                  channel={video.snippet.channelTitle}
                 />
               );
             })}
-          </div>
+          </VideoSection>
         ) : (
           <h3>Loading</h3>
         )}
-      </div>
-    </div>
+      </VideoSectionContainer>
+    </StyledContainer>
   );
 }

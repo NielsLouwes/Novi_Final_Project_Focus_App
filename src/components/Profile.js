@@ -37,6 +37,7 @@ export default function Profile() {
               <strong className="register__label">Email:</strong>{" "}
               {currentUser.email}
             </label>
+            
           ) : (
             <Redirect to="/signin"> </Redirect>
           )}
