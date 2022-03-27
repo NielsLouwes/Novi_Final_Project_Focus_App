@@ -17,9 +17,9 @@ export default function BinauralBeatsFocus() {
   if (error) console.log(error);
 
   return (
-    <StyledContainer>
+    <StyledContainer className="VideoSectionContainer">
       <Title className="VideoSection__Title">Binaural Beats Focus</Title>
-      <VideoSectionContainer>
+      <VideoSectionContainer className="lofiVideoSection">
         {data ? (
           <VideoSection>
             {data.map((video) => {

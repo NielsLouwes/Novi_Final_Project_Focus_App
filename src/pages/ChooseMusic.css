@@ -5,4 +5,5 @@
 
 .mostPopularContainer {
     display: flex;
+    flex: 1;
 }

@@ -15,6 +15,20 @@
   cursor: pointer;
 }
 
+.sidebarRow__genre:last-child {
+  margin-bottom: 30px;
+}
+
+.sidebarRow__genre:focus {
+   color: #9755d4;
+  font-weight: bolder;
+}
+
+.sidebarRow__genre:target {
+   color: #9755d4;
+  font-weight: bolder;
+}
+
 .sidebarRow {
   display: flex;
   flex-direction: column;
