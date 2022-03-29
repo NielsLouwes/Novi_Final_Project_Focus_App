@@ -4,6 +4,9 @@
   background: #3fd472;
   height: 100%;
   position: sticky;
+  border-right: 2px solid white;
+  border: 2px solid white;
+  margin-left: 10px;
 }
 
 .sidebarRow__genre {

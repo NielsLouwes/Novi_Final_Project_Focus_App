@@ -8,7 +8,7 @@ export const StyledContainer = styled.div`
 
 export const Title = styled.div`
   font-size: 2rem;
-   margin-left: 72px;
+   margin-left: 87px;
    font-weight: bolder;
 `
 
@@ -22,24 +22,4 @@ export const VideoSection = styled.div`
     margin-left: 75px;
    margin-top: 15px;
 `
-// .VideoSectionContainer {
-//     background-color: #3FD472;
-//     height: 100%;
-//     flex: 0.8;
-// }
 
-// .VideoSection__Title {
-//     font-size: 2rem;
-//     margin-left: 72px;
-// }
-
-// .lofiChillVideoSection {
-//     display: flex;
-// }
-
-// .VideosSection {
-//     display: flex;
-//     flex-wrap: wrap;
-//     margin-left: 75px;
-//     margin-top: 15px;
-// }
