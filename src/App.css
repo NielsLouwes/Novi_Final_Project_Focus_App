@@ -14,7 +14,7 @@
 
 .main-music-container {
     display: flex;
-    color: #3FD472;
+    /* color: #3FD472; */
     height: 100%;
 }
 
@@ -23,9 +23,9 @@
     margin: 10px 0 10px 0;
     font-size: 2rem;
 }
-s
-.App {
+
+/* .App {
     background: #3FD472;
     
-}
+} */
 
