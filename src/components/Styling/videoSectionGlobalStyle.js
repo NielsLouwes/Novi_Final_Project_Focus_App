@@ -8,18 +8,17 @@ export const StyledContainer = styled.div`
 
 export const Title = styled.div`
   font-size: 2rem;
-   margin-left: 87px;
-   font-weight: bolder;
-`
+  margin-left: 87px;
+  font-weight: bolder;
+`;
 
 export const VideoSectionContainer = styled.div`
-   display: flex;
-`
+  display: flex;
+`;
 
 export const VideoSection = styled.div`
- display: flex;
-     flex-wrap: wrap;
-    margin-left: 75px;
-   margin-top: 15px;
-`
-
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 75px;
+  margin-top: 15px;
+`;
