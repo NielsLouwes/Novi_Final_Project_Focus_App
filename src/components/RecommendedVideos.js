@@ -36,7 +36,7 @@ export default function RecommendedVideos() {
             })}
           </VideoSection>
         ) : (
-          <h3>Loading</h3>
+          <p>Loading</p>
         )}
       </VideoSectionContainer>
     </StyledContainer>

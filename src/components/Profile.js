@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAuth } from "../contexts/AuthContext";
 import { Redirect } from "react-router-dom";
 import "./Profile.css";
@@ -8,36 +8,47 @@ export default function Profile() {
   // const emailRef = useRef();
   const { currentUser } = useAuth();
   const [error, setError] = useState("");
-  const [user, setUser] = useState({ firstname: "", lastname: "" });
+  const [name, setName] = useState(window.localStorage.getItem("name" || ""));
+  const [lastName, setLastName] = useState(
+    window.localStorage.getItem("lastName" || "")
+  );
+
+  useEffect(() => {
+    window.localStorage.setItem("name", name);
+  });
+
+  useEffect(() => {
+    window.localStorage.setItem("lastName", lastName);
+  });
+
+  const handleChange = (event) => setName(event.target.value);
+  const handleChange2 = (event) => setLastName(event.target.value);
+
   const [isEditing, setIsEditing] = useState(false);
 
-  let user2 = ["Niels", "Louwes"];
-  // const editUser2 = () => {
-  //   let userInput = prompt("Enter your first name");
-  //   setUser({ ...user, firstname: userInput });
-  // };
-
   const editUser = () => {
-    setIsEditing(true)
-  }
+    setIsEditing(true);
+  };
 
-  // if isEditing, show edit form , edit form updates the state
-
-  console.log(user);
   return (
     <div className="Profile">
       {error && <h2>{error}</h2>}
       {!isEditing ? (
         <form className="ProfileMain">
           <h2 className="profile-title">My profile </h2>
-          <p className="profile-text">First Name: {user.firstname}</p>
-          <p className="profile-text">Last Name: {user.lastname} </p>
+          <div className="name-container">
+            <label htmlFor="name">First Name: </label>
+            <input value={name} onChange={handleChange} id="name" />
+          </div>
+          <div className="name-container">
+            <label htmlFor="lastName">Last Name: </label>
+            <input value={lastName} onChange={handleChange2} id="lastName" />
+          </div>
           {currentUser ? (
             <label className="register__label" htmlFor="email">
               <strong className="register__label">Email:</strong>{" "}
               {currentUser.email}
             </label>
-            
           ) : (
             <Redirect to="/signin"> </Redirect>
           )}
@@ -45,7 +56,9 @@ export default function Profile() {
             Edit
           </button>
         </form>
-      ) : <EditForm isEditing={isEditing} />}
+      ) : (
+        <EditForm isEditing={isEditing} />
+      )}
     </div>
   );
 }
