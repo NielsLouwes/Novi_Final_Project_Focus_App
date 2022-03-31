@@ -13,17 +13,6 @@ export default function Profile() {
     window.localStorage.getItem("lastName" || "")
   );
 
-  useEffect(() => {
-    window.localStorage.setItem("name", name);
-  });
-
-  useEffect(() => {
-    window.localStorage.setItem("lastName", lastName);
-  });
-
-  const handleChange = (event) => setName(event.target.value);
-  const handleChange2 = (event) => setLastName(event.target.value);
-
   const [isEditing, setIsEditing] = useState(false);
 
   const editUser = () => {
@@ -38,11 +27,11 @@ export default function Profile() {
           <h2 className="profile-title">My profile </h2>
           <div className="name-container">
             <label htmlFor="name">First Name: </label>
-            <input value={name} onChange={handleChange} id="name" />
+            <p>{name}</p>
           </div>
           <div className="name-container">
             <label htmlFor="lastName">Last Name: </label>
-            <input value={lastName} onChange={handleChange2} id="lastName" />
+             <p>{lastName}</p>
           </div>
           {currentUser ? (
             <label className="register__label" htmlFor="email">

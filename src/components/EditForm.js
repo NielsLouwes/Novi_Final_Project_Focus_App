@@ -1,4 +1,4 @@
-import React from "react";
+import React , {useEffect, useState} from "react";
 import { Redirect,  useHistory } from "react-router-dom";
 import styled from "styled-components";
 
@@ -20,8 +20,12 @@ const Form = styled.form`
 const Button = styled.button`
   width: 35%;
 `;
-function EditForm({ isEditing, setIsEditing }) {
+function EditForm({ isEditing, setIsEditing}) {
   const history = useHistory();
+    const [name, setName] = useState(window.localStorage.getItem("name" || ""));
+  const [lastName, setLastName] = useState(
+    window.localStorage.getItem("lastName" || "")
+  );
  
 
   const handleClick = () => {
@@ -29,13 +33,28 @@ function EditForm({ isEditing, setIsEditing }) {
     history.push("/profile");
   };
 
+  useEffect(() => {
+    window.localStorage.setItem("name", name);
+  });
+
+  useEffect(() => {
+    window.localStorage.setItem("lastName", lastName);
+  });
+
+  const handleChange = (event) => setName(event.target.value);
+  const handleChange2 = (event) => setLastName(event.target.value);
+
   return (
     <StyledWrapper>
       <Form>
-        <label>First Name</label>
-        <input type="text" />
-        <label>Last Name</label>
-        <input type="text" name="firstname" />
+        <div className="name-container">
+            <label htmlFor="name">First Name: </label>
+            <input value={name} onChange={handleChange} id="name" />
+          </div>
+          <div className="name-container">
+            <label htmlFor="lastName">Last Name: </label>
+            <input value={lastName} onChange={handleChange2} id="lastName" />
+          </div>
         <Button onClick={handleClick} type="submit">
           Edit{" "}
         </Button>
