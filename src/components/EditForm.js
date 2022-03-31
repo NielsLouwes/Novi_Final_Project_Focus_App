@@ -11,14 +11,33 @@ const StyledWrapper = styled.div`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  background-color: purple;
+  background-color: #9755D4;
   height: 25vh;
   width: 20%;
   border-radius: 15px;
+  div {
+    margin-top: 25px;
+  }
+
+  label {
+    background: #9755D4;
+  }
+
+  input {
+    padding-left: 10px;
+  }
+
 `;
 
 const Button = styled.button`
   width: 35%;
+  margin-left: 85px;
+  margin-top: 50px;
+  width: 30%;
+  margin-top: 25px;
+  border-radius: 15px;
+  margin-left: 32%;
+  padding: 5px;
 `;
 function EditForm({ isEditing, setIsEditing}) {
   const history = useHistory();
@@ -56,7 +75,7 @@ function EditForm({ isEditing, setIsEditing}) {
             <input value={lastName} onChange={handleChange2} id="lastName" />
           </div>
         <Button onClick={handleClick} type="submit">
-          Edit{" "}
+          Save
         </Button>
       </Form>
     </StyledWrapper>
