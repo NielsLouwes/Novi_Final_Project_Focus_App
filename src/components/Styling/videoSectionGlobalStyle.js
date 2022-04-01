@@ -15,6 +15,7 @@ export const Title = styled.div`
 
 export const VideoSectionContainer = styled.div`
   display: flex;
+  width: 100%;
 `;
 
 export const VideoSection = styled.div`

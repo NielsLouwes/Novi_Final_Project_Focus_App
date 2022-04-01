@@ -39,6 +39,7 @@ const Button = styled.button`
   margin-left: 32%;
   padding: 5px;
 `;
+
 function EditForm({ isEditing, setIsEditing}) {
   const history = useHistory();
     const [name, setName] = useState(window.localStorage.getItem("name" || ""));
