@@ -24,3 +24,7 @@ export const VideoSection = styled.div`
   margin-left: 75px;
   margin-top: 15px;
 `;
+
+export const Loading = styled.span`
+  margin-left: 150px;
+  `

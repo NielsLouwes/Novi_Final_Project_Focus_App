@@ -6,6 +6,7 @@ import {
   VideoSectionContainer,
   VideoSection,
   Title,
+  Loading,
 } from "../components/Styling/videoSectionGlobalStyle";
 
 export default function NeoClassical() {
@@ -13,7 +14,7 @@ export default function NeoClassical() {
     `https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=neoclassicalmusic&key=${process.env.REACT_APP_YT_API_KEY}`
   );
 
-  if (loading) return <h1>LOADING...</h1>;
+  if (loading) return <Loading>LOADING...</Loading>;
   if (error) console.log(error);
 
   return (
