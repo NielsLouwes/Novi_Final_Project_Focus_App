@@ -8,9 +8,13 @@
   top: 0;
   z-index: 100;
   background-color: white;
-  border: 2px solid #333333;
+  border: 2px solid black;
   border-radius: 15px;
+  margin-top: 15px;
+  box-shadow: 19px 19px 26px #bebebe, -19px -19px 26px #ffffff;
+  margin-bottom: 15px;
 }
+
 
 .nav-links {
   width: 30%;

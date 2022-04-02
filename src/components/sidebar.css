@@ -10,7 +10,9 @@
   width: 18rem;
   border-radius: 15px;
   margin-top: 15px;
+  box-shadow: 19px 19px 26px #bebebe, -19px -19px 26px #ffffff;
 }
+
 
 .sidebarRow__genre {
   padding: 4px 20px;

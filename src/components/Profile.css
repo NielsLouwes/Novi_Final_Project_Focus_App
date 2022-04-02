@@ -1,21 +1,22 @@
 .ProfileMain {
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    justify-content: center;
-    margin-left: 35%;
-    margin-top: 20%;
-    background: white;
-    height: 30vh;
-    border-radius: 15px;
-    border: 2px solid #333333;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  justify-content: center;
+  margin-left: 35%;
+  margin-top: 20%;
+  height: 30vh;
+  border: 2px solid #333333;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 19px 19px 26px #bebebe, -19px -19px 26px #ffffff;
 }
 
 .profile-title {
-    margin-bottom: 35px;
-    text-align: center;
-    font-size: 2rem;
-    background: white;
+  margin-bottom: 35px;
+  text-align: center;
+  font-size: 2rem;
+  background: white;
 }
 
 .register__label {
@@ -25,13 +26,12 @@
 }
 
 .Profile {
-    background: white;
-    height: 90vh;
-    width: 100%;
-    overflow: hidden;
-    background-size: 40px 40px;
-  background-image:
-    linear-gradient(to right, grey 1px, transparent 1px),
+  background: white;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, grey 1px, transparent 1px),
     linear-gradient(to bottom, grey 1px, transparent 1px);
 }
 
@@ -40,7 +40,7 @@
   margin-left: 30px;
   margin-bottom: 10px;
   font-size: 1.2rem;
-   background: #9755D4;
+  background: #9755d4;
 }
 .profile-button {
   width: 30%;
@@ -59,17 +59,16 @@
   width: 80%;
 }
 
-
 input {
-   background:#3FD472;
+  background: #3fd472;
 }
 
 label {
-   background: white;
-   margin-left: 15px;
+  background: white;
+  margin-left: 15px;
 }
 
- p {
+p {
   background: white;
   padding-right: 75px;
 }
@@ -81,4 +80,3 @@ label {
 .email-container {
   display: flex;
 }
-
