@@ -17,7 +17,7 @@ export default function BinauralBeatsMotivation() {
 
   return (
     <StyledContainer className="VideoSectionContainer">
-      <Title className="VideoSection__Title">Binaural Beats Motivation</Title>
+      <Title >Binaural Beats Motivation</Title>
       <VideoSectionContainer className="lofiVideoSection">
         {data && (
           <VideoSection className="VideosSection">

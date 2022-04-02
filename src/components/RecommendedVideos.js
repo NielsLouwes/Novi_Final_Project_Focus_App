@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import VideoCard from "./Video";
 import useFetch from "./useFetch";
 import {
@@ -9,20 +9,17 @@ import {
 } from "../components/Styling/videoSectionGlobalStyle";
 
 export default function RecommendedVideos() {
-  const { data, loading, error } = useFetch(
+  const { data, error } = useFetch(
     `https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=lofi%20study&key=${process.env.REACT_APP_YT_API_KEY}`
   );
 
-  if (loading) return <div class="spinner-border" role="status">
-        <span class="sr-only">Loading...</span>
-      </div>;
   if (error) console.log(error);
 
   return (
     <StyledContainer className="VideoSectionContainer">
-      <Title className="VideoSection__Title">Most Popular</Title>
+      <Title >Most Popular</Title>
       <VideoSectionContainer className="lofiVideoSection">
-        {data ? (
+        {data && (
           <VideoSection className="VideosSection">
             {data.map((video) => {
               return (
@@ -35,8 +32,6 @@ export default function RecommendedVideos() {
               );
             })}
           </VideoSection>
-        ) : (
-          <p>Loading</p>
         )}
       </VideoSectionContainer>
     </StyledContainer>

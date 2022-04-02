@@ -9,18 +9,17 @@ import {
 import useFetch from "../components/useFetch";
 
 export default function Classical() {
-  const { data, loading, error } = useFetch(
+  const { data, error } = useFetch(
     `https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=classicalmusic&key=${process.env.REACT_APP_YT_API_KEY}`
   );
 
-  if (loading) return <h1>LOADING...</h1>;
   if (error) console.log(error);
 
   return (
     <StyledContainer className="VideoSectionContainer">
-      <Title className="VideoSection__Title">Classical Music</Title>
+      <Title >Classical Music</Title>
       <VideoSectionContainer className="lofiVideoSection">
-        {data ? (
+        {data && (
           <VideoSection className="VideosSection">
             {data.map((video) => {
               return (
@@ -33,8 +32,6 @@ export default function Classical() {
               );
             })}
           </VideoSection>
-        ) : (
-          <h3>Loading</h3>
         )}
       </VideoSectionContainer>
     </StyledContainer>

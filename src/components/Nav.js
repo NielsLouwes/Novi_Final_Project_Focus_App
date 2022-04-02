@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./Nav.css";
-import logo_three from "../files/lofi-logo1.png";
+import logo_three from "../files/image.png";
 import { useAuth } from "../contexts/AuthContext";
 
 export default function Nav() {

@@ -11,11 +11,16 @@ export const Title = styled.div`
   font-size: 2rem;
   margin-left: 87px;
   font-weight: bolder;
+  
 `;
 
 export const VideoSectionContainer = styled.div`
   display: flex;
   width: 100%;
+   background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
 `;
 
 export const VideoSection = styled.div`

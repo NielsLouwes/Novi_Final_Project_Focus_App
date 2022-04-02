@@ -17,8 +17,8 @@ export default function BinauralBeatsFocus() {
 
   return (
     <StyledContainer>
-      <Title className="VideoSection__Title">Binaural Beats Focus</Title>
       <VideoSectionContainer className="lofiVideoSection">
+         <Title >Binaural Beats Focus</Title>
         {data && (
           <VideoSection>
             {data.map((video) => {
