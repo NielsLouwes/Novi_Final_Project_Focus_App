@@ -8,7 +8,7 @@ export default function Home() {
       <div className="welcome-text">
         <h2 className="focusing-text">Focusing made easy.</h2>
         <h2 className="genre-text">
-          Pick your favorite music or see who is online.
+          Pick your favorite music or study live.
         </h2>
       </div>
       <div className="landingPage__buttonContainer">

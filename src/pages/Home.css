@@ -4,7 +4,7 @@
     align-items: center;
     flex-direction: column;
     height: 90vh;
-    background-color: #3FD472;
+    background-color: whitesmoke;
 }
 
 .landingPage__button {
@@ -28,12 +28,11 @@
 
 .landingPage__button {
     padding: 15px;
-    background-color: #3FD472;
     border: none;
 }
 
 .landingPage__buttonText {
-    color: #9755D4;
+    /* color: #333333; */
     font-size: 1.5rem;
     font-weight: bolder;
 }

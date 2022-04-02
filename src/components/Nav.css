@@ -7,8 +7,8 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #3fd472;
-  border-bottom: 2px solid #9755d4;
+  background-color: #333333;
+  border-bottom: 2px solid whitesmoke;
   margin-bottom: 25px;
  
 }
@@ -19,10 +19,12 @@
   justify-content: space-around;
   align-items: center;
   list-style: none;
+  color: black;
+  border-radius: 15px;
 }
 
 .nav-links {
-  color: #9755d4;
+  color: 333333;
 }
 
 .header__logo {
@@ -31,17 +33,17 @@
 }
 
 .nav__text {
-  color: #9755d4;
+  color: 333333;
   font-size: 1.2rem;
   font-weight: bolder;
 }
 
 .nav__text:focus {
-  color: white;
+  color: whitesmoke;
 }
 
 .nav__text:hover {
-  color: white;
+  color: #9755d4;
   font-size: 1.2rem;
   font-weight: bolder;
 }
@@ -50,15 +52,14 @@
   padding: 4px 20px;
   border-radius: 15px;
   border: none;
-  background-color: #3fd472;
-  color: #9755d4;
+  color: black;
   font-size: 1.2rem;
   font-weight: bolder;
 }
 
 .logOutButton:hover {
   cursor: pointer;
-  color: white;
+  color: #9755d4;
   font-size: 1.2rem;
   font-weight: bolder;
 }
