@@ -26,18 +26,20 @@ export default function Profile() {
         <form className="ProfileMain">
           <h2 className="profile-title">My profile </h2>
           <div className="name-container">
-            <label htmlFor="name">First Name: </label>
+            <strong><label htmlFor="name">First Name: </label></strong>
             <p>{name}</p>
           </div>
           <div className="name-container">
-            <label htmlFor="lastName">Last Name: </label>
+            <strong><label htmlFor="lastName">Last Name: </label></strong>
              <p>{lastName}</p>
           </div>
           {currentUser ? (
+            <div className="email-container">
             <label className="register__label" htmlFor="email">
               <strong className="register__label">Email:</strong>{" "}
-              {currentUser.email}
             </label>
+            <p className="email-p">{currentUser.email}</p> 
+            </div>
           ) : (
             <Redirect to="/signin"> </Redirect>
           )}

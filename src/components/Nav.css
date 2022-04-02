@@ -7,10 +7,10 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: #333333;
-  border-bottom: 2px solid whitesmoke;
+  background-color: white;
+  border: 2px solid #333333;
   margin-bottom: 25px;
- 
+  border-radius: 15px;
 }
 
 .nav-links {
@@ -19,12 +19,8 @@
   justify-content: space-around;
   align-items: center;
   list-style: none;
-  color: black;
+  color: #333333;
   border-radius: 15px;
-}
-
-.nav-links {
-  color: 333333;
 }
 
 .header__logo {
@@ -39,7 +35,7 @@
 }
 
 .nav__text:focus {
-  color: whitesmoke;
+  color: white;
 }
 
 .nav__text:hover {

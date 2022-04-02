@@ -11,20 +11,22 @@ const StyledWrapper = styled.div`
 const Form = styled.form`
   display: flex;
   flex-direction: column;
-  background-color: #9755D4;
+  background-color: white;
   height: 25vh;
   width: 20%;
+  border: 2px solid #333333;
   border-radius: 15px;
   div {
     margin-top: 25px;
   }
 
   label {
-    background: #9755D4;
+    background: white;
   }
 
   input {
     padding-left: 10px;
+    background-color: white;
   }
 
 `;

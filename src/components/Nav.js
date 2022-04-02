@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./Nav.css";
-import logo_three from "../files/—Pngtree—target aim archery focus _3657878.png";
+import logo_three from "../files/lofi-logo1.png";
 import { useAuth } from "../contexts/AuthContext";
 
 export default function Nav() {
@@ -26,8 +26,8 @@ export default function Nav() {
     <nav className="header">
       <Link className="nav__text" to="/">
         <img
-          width="100px"
-          height="auto"
+          width="auto"
+          height="500px"
           className="header__logo"
           src={logo_three}
           alt="logo"

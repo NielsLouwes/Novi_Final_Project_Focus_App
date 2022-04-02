@@ -7,7 +7,7 @@
   display: flex;
   margin-top: 5px;
   flex-direction: column;
-  background: mediumpurple;
+  background:   #333333;
   border-radius: 25px;
   margin-left: 15px;
   height: 400px;
@@ -17,20 +17,20 @@
   margin-left: 5px;
   width: 270px;
   padding-left: 10px;
-  background: mediumpurple;
+  background: #333333;
 }
 
 .videoCard__description h4 {
   font-size: 14px;
   margin-bottom: 5px;
   width: 350px;
-  color: black;
-  background: mediumpurple;
+  color: white;
+  background: #333333;
 }
 .videoCard__description p {
   font-size: 14px;
   color: white;
-  background: mediumpurple;
+  background: #333333;
 }
 
 .video__avatar {
