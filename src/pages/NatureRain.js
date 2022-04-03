@@ -17,8 +17,8 @@ export default function NatureSoundsRain() {
 
   return (
     <StyledContainer className="VideoSectionContainer">
-      <Title >Rain Sounds</Title>
       <VideoSectionContainer className="lofiVideoSection">
+      <Title>Rain Sounds</Title>
         {data && (
           <VideoSection className="VideosSection">
             {data.map((video) => {

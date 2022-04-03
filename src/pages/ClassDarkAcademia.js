@@ -17,8 +17,8 @@ export default function DarkAcademia() {
 
   return (
     <StyledContainer className="VideoSectionContainer">
-      <Title >Dark Academia</Title>
       <VideoSectionContainer className="lofiVideoSection">
+         <Title >Dark Academia</Title>
         {data && (
           <VideoSection className="VideosSection">
             {data.map((video) => {

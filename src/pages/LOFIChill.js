@@ -17,8 +17,8 @@ export default function LOFIChill() {
 
   return (
     <StyledContainer className="VideoSectionContainer">
-      <Title >Lofi Chill</Title>
       <VideoSectionContainer className="lofiVideoSection">
+      <Title >Lofi Chill</Title>
         {data && (
           <VideoSection className="VideosSection">
             {data.map((video) => {

@@ -17,8 +17,8 @@ export default function Classical() {
 
   return (
     <StyledContainer className="VideoSectionContainer">
-      <Title >Classical Music</Title>
       <VideoSectionContainer className="lofiVideoSection">
+         <Title >Classical Music</Title>
         {data && (
           <VideoSection className="VideosSection">
             {data.map((video) => {

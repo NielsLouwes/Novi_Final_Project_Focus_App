@@ -17,8 +17,8 @@ export default function NeoClassical() {
 
   return (
     <StyledContainer className="VideoSectionContainer">
-      <Title >Neo Classical</Title>
       <VideoSectionContainer className="lofiVideoSection">
+      <Title >Neo Classical</Title>
         {data && (
           <VideoSection className="VideosSection">
             {data.map((video) => {

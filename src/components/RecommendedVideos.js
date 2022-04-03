@@ -17,8 +17,8 @@ export default function RecommendedVideos() {
 
   return (
     <StyledContainer className="VideoSectionContainer">
-      <Title >Most Popular</Title>
       <VideoSectionContainer className="lofiVideoSection">
+      <Title>Most Popular</Title>
         {data && (
           <VideoSection className="VideosSection">
             {data.map((video) => {

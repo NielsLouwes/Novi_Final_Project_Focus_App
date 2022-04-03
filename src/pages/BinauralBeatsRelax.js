@@ -16,9 +16,9 @@ export default function BinauralBeatsRelax() {
   if (error) console.log(error);
 
   return (
-    <StyledContainer className="VideoSectionContainer">
-      <Title >Binaural Beats Relax</Title>
+    <StyledContainer className="VideoSectionContainer"> 
       <VideoSectionContainer className="lofiVideoSection">
+        <Title >Binaural Beats Relax</Title>
         {data && (
           <VideoSection className="VideosSection">
             {data.map((video) => {

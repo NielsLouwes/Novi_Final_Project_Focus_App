@@ -11,11 +11,11 @@ export const Title = styled.div`
   font-size: 2rem;
   margin-left: 87px;
   font-weight: bolder;
-  
+  display: flex;
 `;
 
 export const VideoSectionContainer = styled.div`
-  display: flex;
+  /* display: flex; */
   width: 100%;
    background-size: 40px 40px;
   background-image:

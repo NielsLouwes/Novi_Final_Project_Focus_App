@@ -17,8 +17,8 @@ export default function LOFIPiano() {
 
   return (
     <StyledContainer className="VideoSectionContainer">
-      <Title >Lofi Piano</Title>
       <VideoSectionContainer className="lofiVideoSection">
+      <Title>Lofi Piano</Title>
         {data && (
           <VideoSection className="VideosSection">
             {data.map((video) => {
