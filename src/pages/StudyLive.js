@@ -49,7 +49,7 @@ export default function StudyLive() {
         <h2 className="StudyLive__TextTwo">
           {" "}
           Nobody online?{" "}
-          <Link className="link-style" style={{ textDecoration: "none" }} to="/choose-music">
+          <Link className="link-style" to="/choose-music">
             Check out videos
           </Link>
         </h2>

@@ -1,40 +1,44 @@
 .StudyLive {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    flex-direction: column;
-    background-color: #3FD472;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  background-color: white;
+  background-size: 40px 40px;
+  background-image: linear-gradient(to right, grey 1px, transparent 1px),
+    linear-gradient(to bottom, grey 1px, transparent 1px);
 }
 
 .StudyLive__VideosSection {
-    display: flex;
-    flex-wrap: wrap;
-    flex: 0.8;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0.8;
 }
 
 .VideosSection {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 75px;
-    margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 75px;
+  margin-top: 15px;
 }
 
 .StudyLive__Text {
-    text-align: center;
-    font-size: 2rem;
+  text-align: center;
+  font-size: 2rem;
 }
 
 .StudyLive__TextTwo {
-    text-align: center;
-    margin-left: 35%;
-    font-size: 2rem;
+  text-align: center;
+  margin-left: 35%;
+  font-size: 2rem;
 }
 
 .link-style:hover {
-  color: white;
+  color: #9755d4;
   font-weight: bolder;
 }
 
 .link-style {
-   color: #9755d4;
+  color: black;
+  text-decoration: underline;
 }
