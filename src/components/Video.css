@@ -1,4 +1,5 @@
 .videoCard {
+  width: 45%;
   min-width: 270px;
   margin-bottom: 40px;
 }
@@ -15,7 +16,7 @@
 
 .videoCard__description {
   margin-left: 5px;
-  width: 270px;
+  width: 65%;
   padding-left: 10px;
   background: #333333;
 }
