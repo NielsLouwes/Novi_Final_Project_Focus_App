@@ -6,9 +6,13 @@ It offers a few different pages to visit based on the selected music genre. User
 
 Screenshots of the application.
 
-![image](https://user-images.githubusercontent.com/76694402/125972861-a080044e-f9a0-477f-b83c-8b15b1bb23d2.png)
+![image](https://user-images.githubusercontent.com/76694402/161438452-61e5de6d-0ff1-48fb-bd26-7011d1355bd4.png)
 
-![image](https://user-images.githubusercontent.com/76694402/132182067-5503416a-80b7-467f-bc3c-62cdf701eb56.png)
+![image](https://user-images.githubusercontent.com/76694402/161438404-48235fe9-bac5-4253-a249-5dde6c7d04d2.png)
+
+![image](https://user-images.githubusercontent.com/76694402/161438453-d66e94c1-4c3e-4087-9f0f-e94a658fdcee.png)
+
+
 
 
 ## Built With
