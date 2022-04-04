@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
+import { useCountdown } from '../hooks/useCountdown';
 
 //WORKING ON PUTTING SIDEBAR IN OBJECTS TO EASILY MAP THROUGH TO REDUCE CODE
 const lofiGenres = ["Hip Hop", "Chill", "Piano"];
@@ -15,8 +16,9 @@ const titleAndGenres = {
   genres: {},
 };
 
-export default function Sidebar() {
+export default function Sidebar({targetDate}) {
   const [time, setTime] = useState(0);
+  const [days, hours, minutes, seconds] = useCountdown(targetDate);
 
   return (
     <div className="sidebar-container">
@@ -99,15 +101,15 @@ export default function Sidebar() {
         </Link>
       </div>
 
-      <div className="pomo-container">
+      {/* <div className="pomo-container">
         <button className="pomodoro" onClick={() => setTime === 5000}>Pomodoro</button>
         <div className="pomo-break-timers">
           <button>Short Break</button>
           <button>Long Break</button>
         </div>
-        <div className="timer">{time}</div>
+        <div className="timer">{minutes}m{seconds}s</div>
         <button className="start-button">Start</button>
-      </div>
+      </div> */}
     </div>
   );
 }
