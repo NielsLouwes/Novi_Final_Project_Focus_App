@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
-import { useCountdown } from '../hooks/useCountdown';
+import { useCountdown } from "../hooks/useCountdown";
 
 //WORKING ON PUTTING SIDEBAR IN OBJECTS TO EASILY MAP THROUGH TO REDUCE CODE
 const lofiGenres = ["Hip Hop", "Chill", "Piano"];
@@ -16,9 +16,35 @@ const titleAndGenres = {
   genres: {},
 };
 
-export default function Sidebar({targetDate}) {
-  const [time, setTime] = useState(0);
+export default function Sidebar({ targetDate }) {
+  const [timer, setCounter] = useState(60);
   const [days, hours, minutes, seconds] = useCountdown(targetDate);
+  const timerRef = useRef<any>();
+
+  // React.useEffect(() => {
+  //   const TimerInt =
+  //     timer > 0 &&
+  //     setInterval(() => {
+  //       setCounter((time) => time - 1);
+  //     }, 1000);
+  //   return () => {
+  //     clearInterval(TimerInt);
+  //   };
+  // }, [timer]);
+
+  //  useEffect(() => {
+  //   timerRef.current = setInterval(() => {
+  //     setCounter((prevTimeLeft) => {
+  //       if (prevTimeLeft > 0) {
+  //         return prevTimeLeft - 1;
+  //       }
+  //       return prevTimeLeft;
+  //     });
+  //   }, 1000);
+  //   return () => {
+  //     clearInterval(timerRef.current);
+  //   };
+  // }, [setCounter]);
 
   return (
     <div className="sidebar-container">
@@ -101,15 +127,17 @@ export default function Sidebar({targetDate}) {
         </Link>
       </div>
 
-      {/* <div className="pomo-container">
-        <button className="pomodoro" onClick={() => setTime === 5000}>Pomodoro</button>
+      <div className="pomo-container">
+        <button className="pomodoro" >
+          Pomodoro
+        </button>
         <div className="pomo-break-timers">
           <button>Short Break</button>
           <button>Long Break</button>
         </div>
-        <div className="timer">{minutes}m{seconds}s</div>
-        <button className="start-button">Start</button>
-      </div> */}
+        <div className="timer">{timer}</div>
+        <button className="start-button" onClick={handleTime}>Start</button>
+      </div>
     </div>
   );
 }
