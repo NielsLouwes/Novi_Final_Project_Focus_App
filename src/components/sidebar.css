@@ -43,4 +43,35 @@
   cursor: pointer;
 }
 
+.pomo-container {
+  border: 1px solid red;
+  border-radius: 15px;
+  height: 20vh;
+}
+
+.pomo-break-timers {
+  display: flex;
+  margin-top: 15px;
+  justify-content: space-around;
+}
+
+.timer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 2rem;
+  font-weight: bolder;
+}
+
+.start-button {
+  margin-left: 42%;
+  margin-top: 45px;
+  padding: 5px;
+}
+
+.pomodoro {
+  margin-left: 38%;
+  margin-top: 10px;
+  padding: 5px;
+}
+
 
