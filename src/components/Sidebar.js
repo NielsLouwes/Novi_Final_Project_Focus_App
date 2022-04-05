@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
+import CountdownTimer from "./CountdownTimer";
 import "./sidebar.css";
-import { useCountdown } from "../hooks/useCountdown";
+
 
 //WORKING ON PUTTING SIDEBAR IN OBJECTS TO EASILY MAP THROUGH TO REDUCE CODE
 const lofiGenres = ["Hip Hop", "Chill", "Piano"];
@@ -18,34 +19,7 @@ const titleAndGenres = {
 
 export default function Sidebar({ targetDate }) {
   const [timer, setCounter] = useState(60);
-  const [days, hours, minutes, seconds] = useCountdown(targetDate);
-  const timerRef = useRef<any>();
-
-  // React.useEffect(() => {
-  //   const TimerInt =
-  //     timer > 0 &&
-  //     setInterval(() => {
-  //       setCounter((time) => time - 1);
-  //     }, 1000);
-  //   return () => {
-  //     clearInterval(TimerInt);
-  //   };
-  // }, [timer]);
-
-  //  useEffect(() => {
-  //   timerRef.current = setInterval(() => {
-  //     setCounter((prevTimeLeft) => {
-  //       if (prevTimeLeft > 0) {
-  //         return prevTimeLeft - 1;
-  //       }
-  //       return prevTimeLeft;
-  //     });
-  //   }, 1000);
-  //   return () => {
-  //     clearInterval(timerRef.current);
-  //   };
-  // }, [setCounter]);
-
+  
   return (
     <div className="sidebar-container">
       <div className="sidebarRow">
@@ -126,8 +100,8 @@ export default function Sidebar({ targetDate }) {
           Fireplace
         </Link>
       </div>
-
-      <div className="pomo-container">
+        <CountdownTimer countdownTimeStampMS={1643673600000} />
+      {/* <div className="pomo-container">
         <button className="pomodoro" >
           Pomodoro
         </button>
@@ -135,9 +109,10 @@ export default function Sidebar({ targetDate }) {
           <button>Short Break</button>
           <button>Long Break</button>
         </div>
-        <div className="timer">{timer}</div>
-        <button className="start-button" onClick={handleTime}>Start</button>
-      </div>
+        <span className="timer">{minutes}</span>
+        <span className="timer">{seconds}</span>
+        <button className="start-button">Start</button>
+      </div> */}
     </div>
   );
 }
