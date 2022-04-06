@@ -100,19 +100,7 @@ export default function Sidebar({ targetDate }) {
           Fireplace
         </Link>
       </div>
-        <CountdownTimer countdownTimeStampMS={1643673600000} />
-      {/* <div className="pomo-container">
-        <button className="pomodoro" >
-          Pomodoro
-        </button>
-        <div className="pomo-break-timers">
-          <button>Short Break</button>
-          <button>Long Break</button>
-        </div>
-        <span className="timer">{minutes}</span>
-        <span className="timer">{seconds}</span>
-        <button className="start-button">Start</button>
-      </div> */}
+        {/* <CountdownTimer countdownTimeStampMS={1643673600000} /> */}
     </div>
   );
 }
