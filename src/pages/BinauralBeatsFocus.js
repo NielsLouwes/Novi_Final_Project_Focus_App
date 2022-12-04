@@ -8,9 +8,9 @@ import {
   Title,
 } from "../components/Styling/videoSectionGlobalStyle";
 
-export default function BinauralBeatsFocus() {
+export default function BinauralBeatsFocus({genre, title}) {
   const { data, error } = useFetch(
-    `https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=binauralbeats%20focus&key=${process.env.REACT_APP_YT_API_KEY}`
+    `https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=${genre}&key=${process.env.REACT_APP_YT_API_KEY}`
   );
 
   if (error) console.log(error);
@@ -18,7 +18,7 @@ export default function BinauralBeatsFocus() {
   return (
     <StyledContainer>
       <VideoSectionContainer className="lofiVideoSection">
-         <Title >Binaural Beats Focus</Title>
+         <Title >{title}</Title>
         {data && (
           <VideoSection>
             {data.map((video) => {

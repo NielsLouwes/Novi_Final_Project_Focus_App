@@ -1,26 +1,26 @@
 import React from "react";
 import VideoCard from "../components/Video";
+import useFetch from "../components/useFetch";
 import {
   StyledContainer,
   VideoSectionContainer,
   VideoSection,
   Title,
 } from "../components/Styling/videoSectionGlobalStyle";
-import useFetch from "../components/useFetch";
 
-export default function LOFIPiano() {
+export default function VideoPage({ genre, title }) {
   const { data, error } = useFetch(
-    `https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=lofi%20piano&key=${process.env.REACT_APP_YT_API_KEY}`
+    `https://youtube.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable:true&maxResults=6&order=relevance&q=${genre}&key=${process.env.REACT_APP_YT_API_KEY}`
   );
 
   if (error) console.log(error);
 
   return (
-    <StyledContainer className="VideoSectionContainer">
+    <StyledContainer>
       <VideoSectionContainer className="lofiVideoSection">
-      <Title>Lofi Piano</Title>
+        <Title>{title}</Title>
         {data && (
-          <VideoSection className="VideosSection">
+          <VideoSection>
             {data.map((video) => {
               return (
                 <VideoCard

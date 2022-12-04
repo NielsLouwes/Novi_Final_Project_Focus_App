@@ -24,6 +24,12 @@ import BinauralBeatsMotivation from "./pages/BinauralBeatsMotivation";
 import NatureSoundsFireplace from "./pages/NatureFireplace";
 import NatureSoundsNature from "./pages/NatureNature";
 import NatureSoundsRain from "./pages/NatureRain";
+import VideoPage from "./components/VideoPage";
+
+/*
+Should make the API call in a util and pass data to each component instead
+
+*/
 
 function App() {
   return (
@@ -33,34 +39,38 @@ function App() {
         <Route exact path="/choose-music/lofi-chill">
           <div className="main-music-container">
             <Sidebar />
-            <LOFIChill />
+            <VideoPage
+              genre="binauralbeats%20focus"
+              title="Binaural Beats Focus"
+            />
           </div>
         </Route>
 
         <Route exact path="/choose-music/lofi-piano">
           <div className="main-music-container">
             <Sidebar />
-            <LOFIPiano />
+            <VideoPage genre="lofi%20piano" title="Lofi Piano" />
           </div>
         </Route>
 
         <Route exact path="/choose-music/lofi-hiphop">
           <div className="main-music-container">
             <Sidebar />
-            <LOFIHiphop />
+            <VideoPage genre="lofi%20hiphop" title="Lofi Hip hop" />
           </div>
         </Route>
 
         <Route exact path="/choose-music-classical-music-classical">
           <div className="main-music-container">
             <Sidebar />
-            <ClassClassical />
+            <VideoPage genre="classicalmusic" title="Classical Music"/>
           </div>
         </Route>
 
         <Route exact path="/choose-music-classical-music-neo-classical">
           <div className="main-music-container">
             <Sidebar />
+             <VideoPage genre="cneoclassicalmusic" title="Neo Classical"/>
             <ClassNeoClassical />
           </div>
         </Route>
