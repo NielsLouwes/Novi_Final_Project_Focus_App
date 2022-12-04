@@ -26,10 +26,31 @@ import NatureSoundsNature from "./pages/NatureNature";
 import NatureSoundsRain from "./pages/NatureRain";
 import VideoPage from "./components/VideoPage";
 
+const sideBarData = [
+  { id: 1, genre: "Lofi chill", path: "/choose-music/lofi-chill" },
+  { id: 1, genre: "Lofi chill", path: "/choose-music/lofi-chill" },
+  { id: 1, genre: "Lofi chill", path: "/choose-music/lofi-chill" },
+  { id: 1, genre: "Lofi chill", path: "/choose-music/lofi-chill" },
+  { id: 1, genre: "Lofi chill", path: "/choose-music/lofi-chill" },
+  { id: 1, genre: "Lofi chill", path: "/choose-music/lofi-chill" },
+];
+
 /*
 Should make the API call in a util and pass data to each component instead
 
+Sidebar should be used once.
+The other pages should just be rendered with the chosen genre.
+The chosen videoPage should be based on the sidebaritems' ID
+
 */
+
+const testPages = sideBarData.map((item) => (
+  <Switch>
+    <Route>
+      <div></div>
+    </Route>
+  </Switch>
+));
 
 function App() {
   return (
@@ -39,10 +60,7 @@ function App() {
         <Route exact path="/choose-music/lofi-chill">
           <div className="main-music-container">
             <Sidebar />
-            <VideoPage
-              genre="binauralbeats%20focus"
-              title="Binaural Beats Focus"
-            />
+            <VideoPage genre="lofi%20chill" title="Lofi chill" />
           </div>
         </Route>
 
@@ -63,21 +81,21 @@ function App() {
         <Route exact path="/choose-music-classical-music-classical">
           <div className="main-music-container">
             <Sidebar />
-            <VideoPage genre="classicalmusic" title="Classical Music"/>
+            <VideoPage genre="classicalmusic" title="Classical Music" />
           </div>
         </Route>
 
         <Route exact path="/choose-music-classical-music-neo-classical">
           <div className="main-music-container">
             <Sidebar />
-             <VideoPage genre="cneoclassicalmusic" title="Neo Classical"/>
-            <ClassNeoClassical />
+            <VideoPage genre="neoclassicalmusic" title="Neo Classical" />
           </div>
         </Route>
 
         <Route exact path="/choose-music-classical-music-dark-academia">
           <div className="main-music-container">
             <Sidebar />
+            <VideoPage genre="neoclassicalmusic" title="Neo Classical" />
             <ClassDarkAcademia />
           </div>
         </Route>
