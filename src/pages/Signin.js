@@ -54,7 +54,6 @@ export default function Login() {
           Don't have an account?{" "}
           <Link
             className="register__link"
-            style={{ color: "white" }}
             to="/register"
           >
             Register

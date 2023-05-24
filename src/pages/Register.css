@@ -1,72 +1,77 @@
 .form-main {
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    /*align-items: center;*/
-    justify-content: center;
-    margin-left: 35%;
-    margin-top: 15%;
-    background: #9755D4;
-    height: 40vh;
-    border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 450px;
+  /*align-items: center;*/
+  justify-content: center;
+  margin-left: 35%;
+  margin-top: 15%;
+  background: white;
+  border: 1px solid black;
+  height: 50vh;
+  border-radius: 50px;
 }
 
 .register__input {
-    box-sizing: border-box;
-    width: 90%;
-    padding: 10px 15px;
-    font-size: 14px;
-    margin-bottom: 20px;
-    margin-left: 15px;
+  box-sizing: border-box;
+  width: 90%;
+  padding: 10px 15px;
+  font-size: 14px;
+  margin-bottom: 20px;
+  margin-left: 15px;
+  background: white;
 }
 
 .register__label {
-    box-sizing: border-box;
-    width: 95%;
-    padding: 10px 15px;
-    font-size: 20px;
+  box-sizing: border-box;
+  width: 95%;
+  padding: 10px 15px;
+  font-size: 20px;
 }
 
 .register__container {
-    width: 450px;
-    display: flex;
-    /*align-items: center;*/
-    justify-content: center;
-    margin-left: 35%;
-    margin-top: 25%;
-    background: #9755D4;
-    height: 60vh;
+  width: 450px;
+  display: flex;
+  /*align-items: center;*/
+  justify-content: center;
+  margin-left: 35%;
+  margin-top: 25%;
+  background: white;
+  border: 1px solid black;
+  height: 60vh;
 }
 
 .register-title {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 10px;
-    background: #9755D4;
-     border-radius: 50px;
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  background: white;
+  width: 50%;
+  margin-left: 115px;
 }
 
 .register__button {
-    width: 50%;
-    margin-left: 110px;
-    margin-top: 15px;
-    margin-bottom: 25px;
-    height: 3vh;
+  width: 50%;
+  margin-left: 110px;
+  margin-top: 5px;
+  margin-bottom: 25px;
+  height: 3vh;
 }
 
 .register__text {
-   margin-left: 25px;
-   background: #9755D4;
-   width: 90%;
+  margin-left: 25px;
+  background: white;
+  width: 90%;
+  /* border: 1px solid black; */
 }
 
 .register-background {
-   background: #3FD472;
-    height: 90vh;
-    width: 100%;
-    overflow: hidden;
+  background: white;
+  height: 90vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 .register__link {
- background: #9755D4;
+  color: black;
 }
