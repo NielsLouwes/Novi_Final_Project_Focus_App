@@ -1,10 +1,5 @@
-import React, { useState, useEffect } from "react";
-import {
-  StyledContainer,
-  VideoSectionContainer,
-  VideoSection,
-  Title,
-} from "../components/Styling/videoSectionGlobalStyle";
+import React, { useState} from "react";
+
 import VideoCard from "../components/Video";
 import { Link, Redirect } from "react-router-dom";
 import "./StudyLive.css";
