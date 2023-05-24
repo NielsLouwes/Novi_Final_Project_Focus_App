@@ -45,11 +45,11 @@ The chosen videoPage should be based on the sidebaritems' ID
 */
 
 const testPages = sideBarData.map((item) => (
-  <Switch>
+  <>
     <Route>
       <div></div>
     </Route>
-  </Switch>
+  </>
 ));
 
 function App() {
@@ -146,13 +146,13 @@ function App() {
           <Home />
         </Route>
 
-        <Route exact path="/register">
+        {/* <Route exact path="/register">
           <Register />
         </Route>
 
         <Route exact path="/signin">
           <Signin />
-        </Route>
+        </Route> */}
 
         <Route exact path="/profile">
           <Profile />

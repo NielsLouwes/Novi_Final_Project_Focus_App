@@ -8,12 +8,11 @@ import {
 import VideoCard from "../components/Video";
 import { Link, Redirect } from "react-router-dom";
 import "./StudyLive.css";
-import { useAuth } from "../contexts/AuthContext";
+// import { useAuth } from "../contexts/AuthContext";
 import useFetch from "../components/useFetch";
 
 export default function StudyLive() {
   const [videos, setVideos] = useState([]);
-  const { currentUser, logout } = useAuth();
 
   const { data, loading, error } = useFetch(
     `https://youtube.googleapis.com/youtube/v3/search?part=snippet&&videoEmbeddable:true&maxResults=9&q=studywithme&key=${process.env.REACT_APP_YT_API_KEY}`
@@ -21,9 +20,6 @@ export default function StudyLive() {
 
   if (loading) return <h1>LOADING...</h1>;
   if (error) console.log(error);
-  if (!currentUser) {
-    return <Redirect to="/signin" />;
-  }
 
   return (
     <div className="StudyLive">

@@ -3,9 +3,21 @@ import { Link } from "react-router-dom";
 import CountdownTimer from "./CountdownTimer";
 import "./sidebar.css";
 
-
 //WORKING ON PUTTING SIDEBAR IN OBJECTS TO EASILY MAP THROUGH TO REDUCE CODE
-const lofiGenres = ["Hip Hop", "Chill", "Piano"];
+// const lofiLinkGenres = [
+//   { genre: "Hip Hop" , link: "/choose-music/lofi-hiphop"  },
+//   { genre: "Chill", link: "/choose-music/lofi-chill"  },
+//   { genre: "Piano", link: "/choose-music/lofi-piano" },
+//   { genre: "Hip Hop" , link:  },
+//   { genre: "Chill", link:  },
+//   { genre: "Piano", link:  },
+//   { genre: "Hip Hop" , link:  },
+//   { genre: "Chill", link:  },
+//   { genre: "Piano", link:  },
+//   { genre: "Hip Hop" , link:  },
+//   { genre: "Chill", link:  },
+//   { genre: "Piano", link:  },
+// ];
 
 const titleAndGenres = {
   title: {
@@ -19,13 +31,13 @@ const titleAndGenres = {
 
 export default function Sidebar({ targetDate }) {
   const [timer, setCounter] = useState(60);
-  
+
   return (
     <div className="sidebar-container">
       <div className="sidebarRow">
         <h2 className="sidebarRow__genre">{titleAndGenres.title.one}</h2>
         <Link className="sidebarRow__genre" to="/choose-music/lofi-hiphop">
-          {lofiGenres[0]}
+          Hip Hop
         </Link>
         <Link className="sidebarRow__genre" to="/choose-music/lofi-chill">
           Chill
@@ -100,7 +112,7 @@ export default function Sidebar({ targetDate }) {
           Fireplace
         </Link>
       </div>
-        {/* <CountdownTimer countdownTimeStampMS={1643673600000} /> */}
+      {/* <CountdownTimer countdownTimeStampMS={1643673600000} /> */}
     </div>
   );
 }
