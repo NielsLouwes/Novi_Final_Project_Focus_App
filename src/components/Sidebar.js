@@ -1,118 +1,60 @@
-import React, { useState, useEffect, useRef } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
-import CountdownTimer from "./CountdownTimer";
 import "./sidebar.css";
 
-//WORKING ON PUTTING SIDEBAR IN OBJECTS TO EASILY MAP THROUGH TO REDUCE CODE
-// const lofiLinkGenres = [
-//   { genre: "Hip Hop" , link: "/choose-music/lofi-hiphop"  },
-//   { genre: "Chill", link: "/choose-music/lofi-chill"  },
-//   { genre: "Piano", link: "/choose-music/lofi-piano" },
-//   { genre: "Hip Hop" , link:  },
-//   { genre: "Chill", link:  },
-//   { genre: "Piano", link:  },
-//   { genre: "Hip Hop" , link:  },
-//   { genre: "Chill", link:  },
-//   { genre: "Piano", link:  },
-//   { genre: "Hip Hop" , link:  },
-//   { genre: "Chill", link:  },
-//   { genre: "Piano", link:  },
-// ];
-
-const titleAndGenres = {
-  title: {
-    one: "LOFI",
-    two: "Classical Music",
-    three: "Binaural Beats",
-    four: "Nature Sounds",
+const titleAndGenres = [
+  {
+    title: "LOFI",
+    genres: [
+      { genre: "Hip Hop", link: "/choose-music/lofi-hiphop" },
+      { genre: "Chill", link: "/choose-music/lofi-chill" },
+      { genre: "Piano", link: "/choose-music/lofi-piano" },
+    ],
   },
-  genres: {},
-};
+  {
+    title: "Classical Music",
+    genres: [
+      { genre: "Classical", link: "/choose-music-classical-music-classical" },
+      {
+        genre: "Neo Classical",
+        link: "/choose-music-classical-music-neo-classical",
+      },
+      {
+        genre: "Dark Academia",
+        link: "/choose-music-classical-music-dark-academia",
+      },
+    ],
+  },
+  {
+    title: "Binaural Beats",
+    genres: [
+      { genre: "Relax", link: "/choose-music-binaural-beats-relax" },
+      { genre: "Focus", link: "/choose-music-binaural-beats-focus" },
+      { genre: "Motivation", link: "/choose-music-binaural-beats-motivation" },
+    ],
+  },
+  {
+    title: "Nature Sounds",
+    genres: [
+      { genre: "Rain", link: "/choose-music-nature-sounds-rain" },
+      { genre: "Nature", link: "/choose-music-nature-sounds-nature" },
+      { genre: "Fireplace", link: "/choose-music-nature-sounds-fireplace" },
+    ],
+  },
+];
 
-export default function Sidebar({ targetDate }) {
-  const [timer, setCounter] = useState(60);
-
-  return (
-    <div className="sidebar-container">
+export default function Sidebar() {
+  const renderSideBarGenres = () =>
+    titleAndGenres.map((item) => (
       <div className="sidebarRow">
-        <h2 className="sidebarRow__genre">{titleAndGenres.title.one}</h2>
-        <Link className="sidebarRow__genre" to="/choose-music/lofi-hiphop">
-          Hip Hop
-        </Link>
-        <Link className="sidebarRow__genre" to="/choose-music/lofi-chill">
-          Chill
-        </Link>
-        <Link className="sidebarRow__genre" to="/choose-music/lofi-piano">
-          Piano
-        </Link>
+        <h2 className="sidebarRow__genre">{item.title}</h2>
+        {item.genres.map((subGenre) => (
+          <Link className="sidebarRow__genre" to={subGenre.link}>
+            {subGenre.genre}
+          </Link>
+        ))}
       </div>
+    ));
 
-      <div className="sidebarRow">
-        <h2 className="sidebarRow__genre">{titleAndGenres.title.two}</h2>
-        <Link
-          className="sidebarRow__genre"
-          to="/choose-music-classical-music-classical"
-        >
-          Classical
-        </Link>
-        <Link
-          className="sidebarRow__genre"
-          to="/choose-music-classical-music-neo-classical"
-        >
-          Neo Classical
-        </Link>
-        <Link
-          className="sidebarRow__genre"
-          to="/choose-music-classical-music-dark-academia"
-        >
-          Dark Academia
-        </Link>
-      </div>
-
-      <div className="sidebarRow">
-        <h2 className="sidebarRow__genre">{titleAndGenres.title.three}</h2>
-        <Link
-          className="sidebarRow__genre"
-          to="/choose-music-binaural-beats-relax"
-        >
-          Relax
-        </Link>
-        <Link
-          className="sidebarRow__genre"
-          to="/choose-music-binaural-beats-focus"
-        >
-          Focus
-        </Link>
-        <Link
-          className="sidebarRow__genre"
-          to="/choose-music-binaural-beats-motivation"
-        >
-          Motivation
-        </Link>
-      </div>
-
-      <div className="sidebarRow">
-        <h2 className="sidebarRow__genre">{titleAndGenres.title.four}</h2>
-        <Link
-          className="sidebarRow__genre"
-          to="/choose-music-nature-sounds-rain"
-        >
-          Rain
-        </Link>
-        <Link
-          className="sidebarRow__genre"
-          to="/choose-music-nature-sounds-nature"
-        >
-          Nature
-        </Link>
-        <Link
-          className="sidebarRow__genre"
-          to="/choose-music-nature-sounds-fireplace"
-        >
-          Fireplace
-        </Link>
-      </div>
-      {/* <CountdownTimer countdownTimeStampMS={1643673600000} /> */}
-    </div>
-  );
+  return <div className="sidebar-container">{renderSideBarGenres()}</div>;
 }
