@@ -17,8 +17,8 @@
 
 
 .nav-links {
-  width: 30%;
   display: flex;
+  margin-right: 25px;
   justify-content: space-around;
   align-items: center;
   list-style: none;
